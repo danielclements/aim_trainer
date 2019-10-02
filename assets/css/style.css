@@ -1,0 +1,145 @@
+body {
+    background-color: #242424
+}
+
+.header-container {
+    color: aliceblue;
+    
+}
+
+
+/* game area */
+
+.main-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.game-area {
+    position: relative;
+
+    width: 1000px;
+    height: 600px;
+    background: #242424;
+
+}
+
+/* annimation by @Huhtamaki on Code Pen, Credit in read me  */
+
+.game-area:before,
+.game-area:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: rgb-border 20s linear infinite;
+}
+
+@keyframes rgb-border {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* end of animation made by @Huhtamaki  */
+
+/* stats area */
+
+.stats{
+    margin-top: 50px;
+}
+
+.user-name {
+    color: #BABABA;
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    text-decoration: none;
+    margin-bottom: 60px;
+}
+
+.user-name:focus {
+    border: solid 2px #25E9E1;
+    outline: none;
+    color: #25E9E1;
+}
+
+
+.stat-hits{
+    color: #BABABA;
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    text-decoration: none;
+    border: solid 2px;
+    margin-bottom: 60px;
+}
+
+.stat-hits:hover{
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+
+.stat-missed{
+    color: #BABABA;
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    text-decoration: none;
+    border: solid 2px;
+    margin-bottom: 60px;
+}
+
+.stat-missed:hover{
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+
+.high-score{
+    color: #BABABA;
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    text-decoration: none;
+    border: solid 2px
+}
+
+.high-score:hover{
+
+    color: #F4F205;
+    border-color: #F4F205;
+}
+
+
+.settings-btn{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    
+}
+
+.settings-btn i{
+    background-color: transparent;
+    color: #BABABA;
+    float: right;
+}
