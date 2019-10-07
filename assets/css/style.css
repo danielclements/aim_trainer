@@ -1,5 +1,5 @@
 body {
-    background-color: #242424
+    background-color: #313131
 }
 
 .header-container {
@@ -82,6 +82,20 @@ body {
     color: #25E9E1;
 }
 
+.stat-hit-percentage{
+    color: #BABABA;
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    text-decoration: none;
+    border: solid 2px;
+    margin-bottom: 60px;
+}
+
+.stat-hit-percentage:hover{
+    border-color: #e90477;
+    color: #e90477;
+}
 
 .stat-hits{
     color: #BABABA;
@@ -148,10 +162,6 @@ body {
 
 /* Spawn point  */
 
-.spawn-point{
-    
-    
-}
 
 .target{
     height: 25px;
