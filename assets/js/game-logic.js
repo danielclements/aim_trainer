@@ -6,7 +6,7 @@ $(document).ready(function () {
 var hitCounter = 0;
 
 
-var spawnCount = 22;
+var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
 var playerName = "Player_1";
@@ -26,7 +26,7 @@ function targetSpawner() {
         killSwitch();
 
 
-        var numberGen = Math.floor((Math.random() * 12) + 1);
+        var numberGen = Math.floor((Math.random() * 132) + 1);
 
 
         var spawnPoint = "#spawn-point-".concat(numberGen);
@@ -40,7 +40,7 @@ function targetSpawner() {
         failedHit();
 
         accuracyCalc();
-        console.log(spawnCount);
+        console.log(numberGen);
 
 
 
@@ -50,7 +50,7 @@ function targetSpawner() {
         killSwitch();
 
 
-        var numberGen = Math.floor((Math.random() * 12) + 1);
+        var numberGen = Math.floor((Math.random() * 132) + 1);
 
 
         var spawnPoint = "#spawn-point-".concat(numberGen);
