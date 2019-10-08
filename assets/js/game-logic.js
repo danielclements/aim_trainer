@@ -4,16 +4,15 @@ $(document).ready(function () {
 // Variables 
 
 var hitCounter = 0;
-var missCounter;
+
 var hitPercentage;
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
 var playerName = "Player_1"
 
-
 const hitDom = $("#hit-counter")
-
+const missDom = $("#missed-counter")
 // Spawner 
 
 
@@ -29,16 +28,16 @@ function targetSpawner() {
     var spawnPoint = "#spawn-point-".concat(numberGen);
 
 
-    $(spawnPoint).append('<div class="target" onclick="targetSpawner(); hitCounter++ ; successfulHit() "></div>');
+    $(spawnPoint).append('<div class="target" onclick="targetSpawner(); hitCounter++ ;"></div>');
 
 
     spawnCount++;
 
-
-
-
-    console.log(spawnCount);
-
+    failedHit();
+    successfulHit();
+    
+    
+    
 };
 
 
@@ -50,10 +49,24 @@ function spawnLoop() {
     }, 1500);
 }
 
-// hit Counter function to be called when a tarhet is clicked on 
+// functions to record successful hits / every time a target is missed 
 
 function successfulHit(){
 
     hitDom.text(hitCounter) 
 
 }
+
+
+function failedHit(num1, num2){
+
+    num1 = spawnCount;
+    num2 = hitCounter;
+
+    var missCounter = num1 - num2;
+
+    missDom.text(missCounter);
+    
+}
+
+
