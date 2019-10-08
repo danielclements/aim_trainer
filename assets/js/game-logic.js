@@ -5,14 +5,17 @@ $(document).ready(function () {
 
 var hitCounter = 0;
 
-var hitPercentage;
+
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
-var playerName = "Player_1"
+var playerName = "Player_1";
 
-const hitDom = $("#hit-counter")
-const missDom = $("#missed-counter")
+const targetId = $("#targetIcon");
+const hitDom = $("#hit-counter");
+const missDom = $("#missed-counter");
+const accuracyDom= $("#accuracy-counter")
+
 // Spawner 
 
 
@@ -28,37 +31,40 @@ function targetSpawner() {
     var spawnPoint = "#spawn-point-".concat(numberGen);
 
 
-    $(spawnPoint).append('<div class="target" onclick="targetSpawner(); hitCounter++ ;"></div>');
+    $(spawnPoint).append('<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();"   id="targetIcon"></div>');
 
 
     spawnCount++;
 
     failedHit();
-    successfulHit();
     
-    
-    
+    accuracyCalc();
+
+
+
 };
 
 
-//calls the Target spawner function every 1.5 seconds if the target is missed , resets on click
+
+
+//calls the Target spawner function every 1.5 seconds if the target is missed 
 function spawnLoop() {
     setTimeout(function () {
         targetSpawner();
         spawnLoop();
     }, 1500);
-}
+};
 
 // functions to record successful hits / every time a target is missed 
 
-function successfulHit(){
+function successfulHit() {
 
-    hitDom.text(hitCounter) 
+    hitDom.text(hitCounter)
 
 }
 
 
-function failedHit(num1, num2){
+function failedHit(num1, num2) {
 
     num1 = spawnCount;
     num2 = hitCounter;
@@ -66,7 +72,16 @@ function failedHit(num1, num2){
     var missCounter = num1 - num2;
 
     missDom.text(missCounter);
+
+};
+
+
+function accuracyCalc(hits, spawned) {
+    hits = hitCounter;
+    spawned = spawnCount;
+
+    var accuracyTotal = hits * 100 / spawned;
+    var accuracyRounded = Math.round(accuracyTotal * 100) / 100;
     
-}
-
-
+    accuracyDom.text(accuracyRounded, '%')
+};

@@ -82,7 +82,7 @@ body {
     color: #25E9E1;
 }
 
-.stat-hit-percentage{
+.stat-accuracy{
     color: #BABABA;
     text-align: center;
     width: 60%;
@@ -92,7 +92,7 @@ body {
     margin-bottom: 60px;
 }
 
-.stat-hit-percentage:hover{
+.stat-accuracy:hover{
     border-color: #e90477;
     color: #e90477;
 }
