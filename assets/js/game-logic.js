@@ -36,7 +36,7 @@ function targetSpawner() {
         var spawnPoint = "#spawn-point-".concat(numberGen);
 
 
-        $(spawnPoint).append('<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon"></div>');
+        $(spawnPoint).append('<div class="fas fa-bullseye target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon"></div>');
 
 
         spawnCount++;
@@ -82,7 +82,7 @@ function targetSpawner() {
 };
 
 function killSwitch() {
-    $(".target").remove();
+    $("#targetIcon").remove();
 
 };
 
