@@ -8,6 +8,10 @@ body {
     
 }
 
+.cross-hair{
+    color: #E00C30
+}
+
 
 /* game area */
 
@@ -151,7 +155,7 @@ body {
     
     font-size: 28px;
     
-    color: #fb004b;
+    color: #f82c2c;
 }
 
 
@@ -169,3 +173,21 @@ body {
 .white{
     color: rgb(201, 201, 201);
 }
+
+
+/* settings containers  */
+
+.settings-containers{
+    
+    background-color: rgb(47, 47, 47);;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 7%;
+    padding-top:15px;
+    padding-bottom: 30px;
+
+}
+
+.header-game-mode{
+    text-align: center;
+}
+
