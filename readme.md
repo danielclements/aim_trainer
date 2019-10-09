@@ -98,3 +98,5 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 
 https://codepen.io/Huhtamaki/pen/GPzwPY CSS rgb border 
+
+random bug : when looking at hits / misses at the end of 30 targets it always adds up to 31 for some reason , still working on this bug 

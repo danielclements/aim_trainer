@@ -1,5 +1,12 @@
+// calls the target spawner every 1500ms
+
 $(document).ready(function () {
-    spawnLoop();
+    setInterval(function spawnLoop() {
+        targetSpawner();
+        
+    }, 1500);
+
+
 });
 // Variables 
 
@@ -44,7 +51,7 @@ function targetSpawner() {
 
 
 
-    } else if (spawnCount <30) {
+    } else if (spawnCount < 30) {
 
 
         killSwitch();
@@ -63,9 +70,9 @@ function targetSpawner() {
         failedHit();
 
         accuracyCalc();
-       
+
         console.log(spawnCount);
-        
+
 
     } else {
         killSwitch();
@@ -80,13 +87,8 @@ function killSwitch() {
 };
 
 
-//calls the Target spawner function every 1.5 seconds if the target is missed 
-function spawnLoop() {
-    setTimeout(function () {
-        targetSpawner();
-        spawnLoop();
-    }, 1500);
-};
+
+
 
 
 
