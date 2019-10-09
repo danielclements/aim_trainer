@@ -176,10 +176,10 @@ body {
 
 
 
-.cursor{
+/* .cursor{
     height: 20px;
     width: 20px;
     border-radius: 25%;
     cursor: url('../assets/images/crosshairs-solid.svg'), auto;
     position: absolute;
-}
+} */

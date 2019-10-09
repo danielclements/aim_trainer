@@ -1,18 +1,12 @@
-// calls the target spawner every 1500ms
 
-$(document).ready(function () {
-    setInterval(function spawnLoop() {
-        targetSpawner();
-        
-    }, 1500);
+  
 
-
-});
 // Variables 
 
 var hitCounter = 0;
-
-
+var timer = new Timer(function() {
+    targetSpawner();
+}, 1000);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -31,7 +25,8 @@ function targetSpawner() {
     if (spawnCount < 29) {
 
         killSwitch();
-
+        timer.stop();
+        timer.start();
 
         var numberGen = Math.floor((Math.random() * 132) + 1);
 
@@ -55,7 +50,8 @@ function targetSpawner() {
 
 
         killSwitch();
-
+        timer.stop();
+        timer.start();
 
         var numberGen = Math.floor((Math.random() * 132) + 1);
 
@@ -76,6 +72,7 @@ function targetSpawner() {
 
     } else {
         killSwitch();
+        timer.stop();
     }
 
 
@@ -125,3 +122,32 @@ function accuracyCalc(hits, spawned) {
 
     accuracyDom.text(accuracyRounded, '%')
 };
+
+// Timer function to reset the interval everytime a target is hit. (by jfriend00 on Stack Overflow) credit in read me 
+
+function Timer(fn, t) {
+    var timerObj = setInterval(fn, t);
+
+    this.stop = function() {
+        if (timerObj) {
+            clearInterval(timerObj);
+            timerObj = null;
+        }
+        return this;
+    }
+
+    // start timer using current settings (if it's not already running)
+    this.start = function() {
+        if (!timerObj) {
+            this.stop();
+            timerObj = setInterval(fn, t);
+        }
+        return this;
+    }
+
+    // start with new interval, stop current interval
+    this.reset = function(newT) {
+        t = newT;
+        return this.stop().start();
+    }
+}
