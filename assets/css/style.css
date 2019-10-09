@@ -1,5 +1,6 @@
 body {
-    background-color: #313131
+    background-color: #242424;
+    height: 100vh;
 }
 
 .header-container {
@@ -14,15 +15,13 @@ body {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-
-
 }
 
 
 .game-area {
     position: relative;
     padding:0;
-    background-color: #242424;
+    background-color: #313131;
 
 }
 
@@ -62,7 +61,7 @@ body {
 /* stats area */
 
 .stats-area{
-    margin-top: 50px;
+    margin:0;
     padding-left: 6%;
 }
 
@@ -87,46 +86,41 @@ body {
 .stat-accuracy{
     color: #BABABA;
     border: solid 2px;
+    border-color: #a67beb;
+    color: #a67beb;
    
 }
 
-.stat-accuracy:hover{
-    border-color: #e90477;
-    color: #e90477;
-}
+
 
 .stat-hits{
     color: #BABABA;
     border: solid 2px;
+    border-color: #2FC946;
+    color: #2FC946;
 }
 
-.stat-hits:hover{
-    border-color: #00ff00;
-    color: #00ff00;
-}
+
 
 
 .stat-missed{
     color: #BABABA;
     border: solid 2px;
+    border-color: #E00C30;
+    color: #E00C30;
 }
 
-.stat-missed:hover{
-    border-color: #ff0000;
-    color: #ff0000;
-}
+
 
 
 .high-score{
     color: #BABABA;
-    border: solid 2px
-}
-
-.high-score:hover{
-
+    border: solid 2px;
     color: #F4F205;
     border-color: #F4F205;
 }
+
+
 
 
 .settings-btn{
@@ -169,3 +163,9 @@ body {
     cursor: url('../assets/images/crosshairs-solid.svg'), auto;
     position: absolute;
 } */
+
+/* colors */
+
+.white{
+    color: rgb(201, 201, 201);
+}
