@@ -4,9 +4,9 @@
 // Variables 
 
 var hitCounter = 0;
-var timer = new Timer(function() {
+var timerPro = new Timer(function() {
     targetSpawner();
-}, 1400);
+}, 700);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -27,8 +27,8 @@ function targetSpawner() {
     if (spawnCount < 29) {
 
         killSwitch();
-        timer.stop();
-        timer.start();
+        timerPro.stop();
+        timerPro.start();
 
         var numberGen = Math.floor((Math.random() * 132) + 1);
 
@@ -44,7 +44,7 @@ function targetSpawner() {
         failedHit();
 
         accuracyCalc();
-        console.log(spawnCount);
+        console.log(numberGen);
 
 
 
@@ -52,8 +52,8 @@ function targetSpawner() {
 
 
         killSwitch();
-        timer.stop();
-        timer.start();
+        timerPro.stop();
+        timerPro.start();
 
         var numberGen = Math.floor((Math.random() * 132) + 1);
 
@@ -69,12 +69,12 @@ function targetSpawner() {
 
         accuracyCalc();
 
-        console.log(spawnCount);
+        console.log(numberGen);
 
 
     } else {
         killSwitch();
-        timer.stop();
+        timerPro.stop();
         failedHitFinal();
     }
 
