@@ -6,7 +6,7 @@
 var hitCounter = 0;
 var timer = new Timer(function() {
     targetSpawner();
-}, 1000);
+}, 1400);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -22,6 +22,8 @@ const accuracyDom = $("#accuracy-counter")
 
 function targetSpawner() {
 
+
+
     if (spawnCount < 29) {
 
         killSwitch();
@@ -34,7 +36,7 @@ function targetSpawner() {
         var spawnPoint = "#spawn-point-".concat(numberGen);
 
 
-        $(spawnPoint).append('<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit(); "   id="targetIcon"></div>');
+        $(spawnPoint).append('<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon"></div>');
 
 
         spawnCount++;
@@ -42,7 +44,7 @@ function targetSpawner() {
         failedHit();
 
         accuracyCalc();
-        console.log(numberGen);
+        console.log(spawnCount);
 
 
 
@@ -58,7 +60,7 @@ function targetSpawner() {
 
         var spawnPoint = "#spawn-point-".concat(numberGen);
 
-        $(spawnPoint).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch();"   id="targetIcon"></div>`);
+        $(spawnPoint).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch(); failedHit();"   id="targetIcon"></div>`);
 
 
         spawnCount++;
@@ -73,6 +75,7 @@ function targetSpawner() {
     } else {
         killSwitch();
         timer.stop();
+        failedHitFinal();
     }
 
 
@@ -98,19 +101,26 @@ function successfulHit() {
 }
 
 
-function failedHit(num1, num2) {
 
-    num1 = spawnCount;
-    num2 = hitCounter;
 
-    var missCounter = num1 - num2;
+function failedHit() {
 
-    if (spawnCount <= 30) {
+
+    var missCounter = (spawnCount - 1) - hitCounter ;
+
+  
         missDom.text(missCounter);
-    }
+    
 
 
-};
+    };
+
+function failedHitFinal(){
+    var missCounter = spawnCount  - hitCounter ;
+
+  
+    missDom.text(missCounter);
+}
 
 
 function accuracyCalc(hits, spawned) {
