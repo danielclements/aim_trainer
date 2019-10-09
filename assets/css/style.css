@@ -22,7 +22,7 @@ body {
 .game-area {
     position: relative;
     padding:0;
-    background: #242424;
+    background-color: #242424;
 
 }
 
@@ -61,17 +61,21 @@ body {
 
 /* stats area */
 
-.stats{
+.stats-area{
     margin-top: 50px;
+    padding-left: 6%;
 }
 
-.user-name {
-    color: #BABABA;
+.stats{
     text-align: center;
-    width: 60%;
+    width: 150px;
     background-color: transparent;
     text-decoration: none;
     margin-bottom: 60px;
+}
+.user-name {
+    color: #BABABA;
+    
 }
 
 .user-name:focus {
@@ -82,12 +86,8 @@ body {
 
 .stat-accuracy{
     color: #BABABA;
-    text-align: center;
-    width: 60%;
-    background-color: transparent;
-    text-decoration: none;
     border: solid 2px;
-    margin-bottom: 60px;
+   
 }
 
 .stat-accuracy:hover{
@@ -97,12 +97,7 @@ body {
 
 .stat-hits{
     color: #BABABA;
-    text-align: center;
-    width: 60%;
-    background-color: transparent;
-    text-decoration: none;
     border: solid 2px;
-    margin-bottom: 60px;
 }
 
 .stat-hits:hover{
@@ -113,12 +108,7 @@ body {
 
 .stat-missed{
     color: #BABABA;
-    text-align: center;
-    width: 60%;
-    background-color: transparent;
-    text-decoration: none;
     border: solid 2px;
-    margin-bottom: 60px;
 }
 
 .stat-missed:hover{
@@ -129,10 +119,6 @@ body {
 
 .high-score{
     color: #BABABA;
-    text-align: center;
-    width: 60%;
-    background-color: transparent;
-    text-decoration: none;
     border: solid 2px
 }
 
@@ -168,10 +154,10 @@ body {
 }
 
 .target{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background-color: #fb0094;
+    
+    font-size: 28px;
+    
+    color: #fb004b;
 }
 
 
