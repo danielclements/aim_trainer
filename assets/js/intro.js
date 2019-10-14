@@ -1,5 +1,7 @@
 $( document ).ready(function() {
  
+    introMusic.play();
+
    setInterval(() => {
        targetSpawner();
        
