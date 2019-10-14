@@ -229,8 +229,8 @@
                         <div class="offset-1 col-sm-5 settings-containers">
                             <h6 class="header-game-mode white ">Sound:</h6>
                             <div style="display: flex; justify-content: center;">
-                                <button class="btn btn-secondary mt-3">On</button>
-                                <button class="btn btn-danger mt-3 ml-2">off</button>
+                                    <button onclick="audioOn()" class="btn btn-success mt-3" id="audioOn">On</button>
+                                    <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2" id="audioOff">off</button>
                             </div>
                         </div>
 
@@ -240,8 +240,8 @@
                         <div class="col-sm-6 mt-5 settings-containers">
                             <h6 class="header-game-mode white">Theme:</h6>
                             <div style="display: flex; justify-content: center;">
-                                <button onclick="darkSwitch()"class="btn btn-success mt-3" id="darkModeToggle">Dark</button>
-                                <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2" id="lightModeToggle">Light</button>
+                                    <button onclick="darkSwitch()"class="btn btn-success mt-3" id="darkModeToggle">Dark</button>
+                                    <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2" id="lightModeToggle">Light</button>
                             </div>
                         </div>
 
