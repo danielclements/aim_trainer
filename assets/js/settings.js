@@ -22,7 +22,8 @@ function lightSwitch(){
     $(".header-game-mode").removeClass("white");
     $(".game-area").addClass("game-area-light");
     $(".index-header").addClass("index-header-light");
-    
+    $(".about-para").removeClass("white");
+    $(".rules-header").removeClass("white");
 }
 
 
@@ -36,6 +37,8 @@ function darkSwitch(){
     $(".header-game-mode").addClass("white");
     $(".game-area").removeClass("game-area-light");
     $(".index-header").removeClass("index-header-light");
+    $(".about-para").addClass("white");
+    $(".rules-header").addClass("white");
     
 }
 

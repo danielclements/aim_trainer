@@ -27,11 +27,16 @@ body {
     position: relative;
     padding: 0;
     background-color: #313131;
+    margin-right:10px;
 
 }
 
 .game-area-light{
     background-color:rgb(182, 180, 180) ;
+    border: solid 2px rgb(170, 167, 167);
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
 }
 
 /* annimation by @Huhtamaki on Code Pen, Credit in read me  */
@@ -175,14 +180,19 @@ body {
 
 /* settings containers  */
 
-.settings-containers {
 
-    background-color: rgb(47, 47, 47);
+.settings-containers {
+    font-family: 'Orbitron', sans-serif;
+
+    background-color: rgb(63, 62, 62);
     ;
     border: 1px solid rgb(31, 31, 31);
     border-radius: 7%;
     padding-top: 20px;
     padding-bottom: 30px;
+    -webkit-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.07);
+    -moz-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.07);
+    box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.07);
 
 
 }
@@ -209,12 +219,16 @@ body {
     padding-top: 15px;
     padding-bottom: 30px;
     width: 100%;
-    background-color: rgb(139, 139, 139);
-    ;
+    background-color: rgb(63, 62, 62);
     border: 1px solid rgb(31, 31, 31);
+    
     margin-left: 15px;
     margin-right: 15px;
+    -webkit-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
+    -moz-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
+    box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
 }
+
 
 
 
@@ -228,14 +242,25 @@ body {
 
 .rules-header {
     text-decoration: underline;
-    color: rgb(243, 243, 243);
+    font-family: 'Orbitron', sans-serif;
+   
 }
 
 .index-header{
-    text-decoration: underline;
-    color: rgb(144, 138, 138);
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 .index-header-light{
-    color:rgb(107, 106, 106);
+    color:rgb(62, 62, 62);
 }
+
+.about-para{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 17px;
+}
+
+.btn-play{
+    font-family: 'Orbitron', sans-serif;
+}
+
