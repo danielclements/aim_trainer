@@ -6,7 +6,7 @@
 var hitCounter = 0;
 var timerPro = new Timer(function() {
     targetSpawner();
-}, 700);
+}, 900);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -20,6 +20,7 @@ const accuracyDom = $("#accuracy-counter")
 
 // Audio
 
+
 var introMusic = new Audio();
 introMusic.src = "assets/audio/273539__tristan-lohengrin__8bit-introduction.wav";
 
@@ -28,9 +29,10 @@ gunSound.src = "assets/audio/404795__owlstorm__retro-video-game-sfx-laser-2.wav"
 
 var hitSound = new Audio();
 hitSound.src = "assets/audio/431329__someguy22__8-bit-powerup.wav";
+hitSound.volume = 0.09;
 
 var menuSound = new Audio();
-menuSound.src = "assets/audio/350863__cabled-mess__blip-c-03.wav"
+menuSound.src = "assets/audio/350863__cabled-mess__blip-c-03.wav";
 
 
 
@@ -112,10 +114,10 @@ function killSwitch() {
 // functions to record successful hits / every time a target is missed / Accuracy calc 
 
 function successfulHit() {
+    hitSound.play();
+    hitDom.text(hitCounter);
 
-    hitDom.text(hitCounter)
-
-}
+};
 
 
 
@@ -178,3 +180,5 @@ function Timer(fn, t) {
         return this.stop().start();
     }
 }
+
+

@@ -1,15 +1,15 @@
 body {
     background-color: #1b1b1b;
-    height: 100vh;
+    
 }
 
 .header-container {
     margin-top: 20px;
     color: aliceblue;
-    
+
 }
 
-.cross-hair{
+.cross-hair {
     color: #E00C30
 }
 
@@ -25,9 +25,13 @@ body {
 
 .game-area {
     position: relative;
-    padding:0;
+    padding: 0;
     background-color: #313131;
 
+}
+
+.game-area-light{
+    background-color:rgb(182, 180, 180) ;
 }
 
 /* annimation by @Huhtamaki on Code Pen, Credit in read me  */
@@ -65,21 +69,22 @@ body {
 
 /* stats area */
 
-.stats-area{
-    margin:0;
+.stats-area {
+    margin: 0;
     padding-left: 6%;
 }
 
-.stats{
+.stats {
     text-align: center;
     width: 150px;
     background-color: transparent;
     text-decoration: none;
     margin-bottom: 60px;
 }
+
 .user-name {
     color: #BABABA;
-    
+
 }
 
 .user-name:focus {
@@ -88,17 +93,17 @@ body {
     color: #25E9E1;
 }
 
-.stat-accuracy{
+.stat-accuracy {
     color: #BABABA;
     border: solid 2px;
     border-color: #a67beb;
     color: #a67beb;
-   
+
 }
 
 
 
-.stat-hits{
+.stat-hits {
     color: #BABABA;
     border: solid 2px;
     border-color: #2FC946;
@@ -108,7 +113,7 @@ body {
 
 
 
-.stat-missed{
+.stat-missed {
     color: #BABABA;
     border: solid 2px;
     border-color: #E00C30;
@@ -118,7 +123,7 @@ body {
 
 
 
-.high-score{
+.high-score {
     color: #BABABA;
     border: solid 2px;
     color: #F4F205;
@@ -128,14 +133,14 @@ body {
 
 
 
-.settings-btn{
+.settings-btn {
     background-color: transparent;
     border: 0;
     font-size: 20px;
-    
+
 }
 
-.settings-btn i{
+.settings-btn i {
     background-color: transparent;
     color: #BABABA;
     float: right;
@@ -145,17 +150,17 @@ body {
 
 /* Spawn point  */
 
-.spawn-point{
+.spawn-point {
     height: 52px;
     margin: 0;
     padding: 0;
-    
+
 }
 
-.target{
-    
+.target {
+
     font-size: 28px;
-    
+
     color: #f82c2c;
 }
 
@@ -163,25 +168,34 @@ body {
 
 /* colors */
 
-.white{
+.white {
     color: rgb(201, 201, 201);
 }
 
 
 /* settings containers  */
 
-.settings-containers{
-    
-    background-color: rgb(47, 47, 47);;
+.settings-containers {
+
+    background-color: rgb(47, 47, 47);
+    ;
     border: 1px solid rgb(31, 31, 31);
     border-radius: 7%;
-    padding-top:20px;
+    padding-top: 20px;
     padding-bottom: 30px;
-   
+
 
 }
 
-.header-game-mode{
+.settings-containers-light{
+    background-color: rgb(182, 180, 180);
+    border: 1px solid rgb(51, 51, 51);
+    -webkit-box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
+}
+
+.header-game-mode {
     text-align: center;
 }
 
@@ -190,26 +204,38 @@ body {
 
 /* Rules Page!  */
 
-.rules-info{
-     
-    background-color: rgb(167, 166, 166);;
-    border: 1px solid rgb(31, 31, 31);
+.rules-info {
     border-radius: 1%;
-    padding-top:15px;
+    padding-top: 15px;
     padding-bottom: 30px;
-    width:100%;
-    
+    width: 100%;
+    background-color: rgb(139, 139, 139);
+    ;
+    border: 1px solid rgb(31, 31, 31);
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.rules-header{
-    text-decoration: underline;
-    color: rgb(29, 29, 29);
+
+
+.rules-info-light {
+    background-color: rgb(182, 180, 180);
+    border: 1px solid rgb(51, 51, 51);
+    -webkit-box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 17px 3px rgba(0, 0, 0, 0.75);
 }
 
-.intro-target{
-    color: white;
-    font-size: 26px;
+.rules-header {
+    text-decoration: underline;
+    color: rgb(243, 243, 243);
+}
 
+.index-header{
+    text-decoration: underline;
+    color: rgb(144, 138, 138);
+}
+
+.index-header-light{
+    color:rgb(107, 106, 106);
 }
