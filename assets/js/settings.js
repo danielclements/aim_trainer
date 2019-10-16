@@ -41,6 +41,11 @@ var menuSound = new Audio();
 menuSound.src = "assets/audio/350863__cabled-mess__blip-c-03.wav";
 
 
+var gameTheme = new Audio();
+gameTheme.src = "assets/audio/Mecha Collection.mp3";
+gameTheme.volume = 0.09;
+
+
 
 // Themes 
 
@@ -86,6 +91,7 @@ function audioOff() {
     $("#audioOn").removeClass("btn-success").addClass("btn-secondary");
     hitSound.volume = 0;
     introMusic.volume = 0;
+    gameTheme.volume = 0;
 }
 
 
@@ -98,4 +104,5 @@ function audioOn() {
 
     introMusic.volume = 0.09;
     hitSound.volume = 0.09;
+    gameTheme.volume = 0.09;
 }

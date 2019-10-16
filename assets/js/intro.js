@@ -1,5 +1,5 @@
 $( document ).ready(function() {
- 
+
     introMusic.play();
 
    setInterval(() => {
@@ -29,7 +29,7 @@ function targetSpawner() {
 
 
     
-    console.log(numberGen);
+  
 }
 
 
