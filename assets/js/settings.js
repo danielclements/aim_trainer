@@ -62,6 +62,11 @@ function lightSwitch() {
     $(".index-header").addClass("index-header-light");
     $(".about-para").removeClass("white");
     $(".rules-header").removeClass("white");
+    $("#player-user").addClass("user-name-light").removeClass("user-name");
+    $(".stat-hits").addClass("btn-success").removeClass("stat-hits").addClass("stat-hits-light");
+    $(".stat-missed").addClass("btn-danger").removeClass("stat-missed").addClass("stat-missed-light");
+    $(".high-score").addClass("high-score-light");
+    $("#stats-header").removeClass("white");
 }
 
 
@@ -78,8 +83,13 @@ function darkSwitch() {
     $(".index-header").removeClass("index-header-light");
     $(".about-para").addClass("white");
     $(".rules-header").addClass("white");
-
+    $("#player-user").removeClass("user-name-light").addClass("user-name");
+    $(".stat-hits-light").removeClass("btn-success").addClass("stat-hits").removeClass("stat-hits-light");
+    $(".stat-missed-light").removeClass("btn-danger").addClass("stat-missed").removeClass("stat-missed-light");
+    $(".high-score-light").removeClass("high-score-light");
+    $("#stats-header").addClass("white");
 }
+
 
 
 // audio toggle 
