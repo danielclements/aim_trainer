@@ -103,6 +103,8 @@ https://stackoverflow.com/questions/8126466/how-do-i-reset-the-setinterval-timer
 
 random bug : when looking at hits / misses at the end of 30 targets it always adds up to 31 for some reason , still working on this bug 
 
+bug : intro music on index page doesn't always play on page refresh 
+
 (or "8Bit Introduction" song) by Tristan Lohengrin : https://www.tristanlohengrin.com/
 
 
