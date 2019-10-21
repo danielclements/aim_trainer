@@ -356,3 +356,24 @@ body {
           height: 42px;
       }
 }
+
+@media screen 
+        and (min-width: 768px) 
+        and (max-width: 1024px) {
+  
+    .btn-settings{
+        font-size: 10px;
+    }
+
+    .settings{
+        margin-top: 20px;
+    }
+    
+    .settings-containers{
+        margin: 10px;;
+    }
+
+    .header-game-mode{
+        font-size: 15px;
+    }
+  }
