@@ -27,41 +27,41 @@
 
         </div>
     </div>
-    <div class="main-container  row container-fluid">
+    <div class="main-container row container-fluid">
 
 
-        <div class=" col-md-5 col-lg-3  d-flex container-fluid">
-           
-            <div class="rules-info p-3  d-flex justify-content-center" id="rules-color">
+        <div class="col-md-5 col-lg-2  container-fluid">
+
+            <div class="p-3  d-flex justify-content-center">
 
                 <div class="test">
                     <h6 class="white" id="stats-header" style="margin-bottom: 40px;">Stats:</h6>
-                <input type="text" class="user-name stats" id="player-user" value="Player_1"
-                    style="margin-bottom: 40px;" />
-                <div class="stats-container">
-                    <p class="stat-hits stats ">Hits: <span id="hit-counter"></span></p>
-                </div>
+                    <input type="text" class="user-name stats" id="player-user" value="Player_1"
+                        style="margin-bottom: 40px;" />
+                    <div class="stats-container">
+                        <p class="stat-hits stats ">Hits: <span id="hit-counter"></span></p>
+                    </div>
 
-                <div class="stats-container">
-                    <p class="stat-missed stats">missed: <span id="missed-counter"></span></p>
-                </div>
+                    <div class="stats-container">
+                        <p class="stat-missed stats">missed: <span id="missed-counter"></span></p>
+                    </div>
 
-                <!-- <div class="stats-container">
+                    <!-- <div class="stats-container">
                     <p class="stat-accuracy stats"> Accuracy: <br> <span id="accuracy-counter"></span>%</p>
                 </div> -->
 
-                <div class="stats-container">
-                    <div class="high-score stats">High_Score
-                        <p>User:
-                            <span class="user-high-score"></span>
-                        </p>
+                    <div class="stats-container">
+                        <div class="high-score stats">High_Score
+                            <p>User:
+                                <span class="user-high-score"></span>
+                            </p>
 
-                        <p>Score:
-                            <span class="score-high-score"></span>
-                        </p>
+                            <p>Score:
+                                <span class="score-high-score"></span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
         <div class="col-sm-6 p-0">
@@ -238,15 +238,17 @@
                     <div class="col-sm-6 settings-containers">
                         <h6 class="header-game-mode white">Game Mode:</h6>
                         <div style="display: flex; justify-content: center;">
-                            <button class="btn btn-secondary mt-3">Beginner</button>
-                            <button class="btn btn-success mt-3 ml-2">Pro</button>
+                            <button class="btn btn-secondary mt-3 btn-settings">Beginner</button>
+                            <button class="btn btn-success mt-3 ml-2 btn-settings">Pro</button>
                         </div>
                     </div>
                     <div class="offset-1 col-sm-5 settings-containers">
                         <h6 class="header-game-mode white ">Sound:</h6>
                         <div style="display: flex; justify-content: center;">
-                            <button onclick="audioOn()" class="btn btn-success mt-3" id="audioOn">On</button>
-                            <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2" id="audioOff">off</button>
+                            <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
+                                id="audioOn">On</button>
+                            <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                id="audioOff">off</button>
                         </div>
                     </div>
 
@@ -256,16 +258,16 @@
                     <div class="col-sm-6 mt-5 settings-containers">
                         <h6 class="header-game-mode white">Theme:</h6>
                         <div style="display: flex; justify-content: center;">
-                            <button onclick="darkSwitch()" class="btn btn-success mt-3"
+                            <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
                                 id="darkModeToggle">Dark</button>
-                            <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2"
+                            <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2 btn-settings"
                                 id="lightModeToggle">Light</button>
                         </div>
                     </div>
 
                     <div class="offset-1 col-sm-5 mt-5">
                         <div style="display: flex; justify-content: center;">
-                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play">Play!</a>
+                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
 
                         </div>
                     </div>
@@ -274,6 +276,16 @@
 
         </div>
     </div>
+
+
+    <footer>
+        <div class="footer-container container-fluid">
+            .
+
+        </div>
+
+    </footer>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

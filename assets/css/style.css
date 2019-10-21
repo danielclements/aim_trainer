@@ -17,7 +17,7 @@ body {
 /* game area */
 
 .main-container {
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -301,10 +301,58 @@ body {
 
 .about-para {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .btn-play {
     font-family: 'Orbitron', sans-serif;
 }
 
+.btn-settings{
+    font-size: 13px;
+}
+
+
+
+
+
+/* Scalling for laptops  */
+
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+
+      .about-para{
+          font-size: 13px;
+      }
+
+      .btn-settings{
+          font-size: 10px;
+      }
+
+      .header-game-mode{
+          font-size: 13px;
+      }
+
+
+      .index-header{
+          font-size: 20px;
+      }
+      
+
+      .stats{
+          font-size: 14px;
+      }
+
+      .main-container{
+          margin-top: 30px;
+      }
+
+      .spawn-point{
+          height: 42px;
+      }
+}
