@@ -37,7 +37,7 @@ function targetSpawner() {
         timerPro.start();
         $(spawner()).append('<div class="fas fa-bullseye target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon"></div>');
         spawnCount++;
-        failedHit();
+        failedHitDomPusher();
         accuracyCalc();
 
     } else if (spawnCount = 30) {
@@ -47,7 +47,7 @@ function targetSpawner() {
         // chnaged the onlick on target to stop spawning further tagets on click 
         $(spawner()).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch(); failedHit();"   id="targetIcon"></div>`);
         spawnCount++;
-        failedHit();
+        failedHitDomPusher();
         accuracyCalc();
 
     } else {
@@ -59,7 +59,6 @@ function targetSpawner() {
 
 // function to calculate where the target will spawn next
 function spawner() {
-
     var numberGen = Math.floor((Math.random() * 132) + 1);
     var spawnPoint = "#spawn-point-".concat(numberGen);
     return (spawnPoint);
@@ -89,13 +88,18 @@ function successfulHit() {
 
 function failedHit() {
     var missCounter = (spawnCount - 1) - hitCounter;
-    missDom.text(missCounter);
+   return(missCounter)
+};
+
+function failedHitDomPusher(){
+    missDom.text(failedHit());
 };
 
 function failedHitFinal() {
     var missCounter = spawnCount - hitCounter;
     missDom.text(missCounter);
-}
+};
+
 
 
 function accuracyCalc(hits, spawned) {
@@ -105,9 +109,12 @@ function accuracyCalc(hits, spawned) {
     var accuracyTotal = hits * 100 / spawned;
     var accuracyRounded = Math.round(accuracyTotal * 100) / 100;
 
-    accuracyDom.text(accuracyRounded, '%')
+    return(accuracyRounded); 
 };
 
+function accuracyDomPusher(){
+    accuracyDom.text(accuracyCalc(), '%');
+};
 // Timer function to reset the interval everytime a target is hit. (by jfriend00 on Stack Overflow) credit in read me 
 
 function Timer(fn, t) {
