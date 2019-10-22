@@ -32,7 +32,7 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Another feature idea
+- In the future I plan to add a alternate game mode that will focus on hitting as many tagets in a row as          possible. The aim of this mode will be to get the highest hit count possible , as soon as one target is missed   the game mode will end.
 
 ## Technologies Used
 
@@ -46,10 +46,13 @@ In addition, you may also use this section to discuss plans for additional featu
     - The project uses **JQuery** to improve dom manipulation with in javascript.  
 
 - [Bootstrap 4](https://getbootstrap.com)
-    - This project uses **Bootstrap** to improve scaling to mobile.  
+    - This project uses **Bootstrap** to improve scaling to mobile and decrease development time
 
 - [Sketch](https://www.sketch.com/)
     - This project uses **Sketch** to create mockups / wireframes.
+
+- [Font Awesome](https://fontawesome.com/)
+    - this project uses font awesome to display a few icons in the title and the targets.
 
 ## Testing
 
@@ -59,28 +62,35 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
+## Bugs
+
+- Intro music on index page and battle music on aim_trainer dont always play when the page is loaded.
+
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This site is hosted on github pages.The page is being hosted directly from the master branch, that way any updates that are committed will be updated straight away.  
+By using the file name `index.html` github pages knows what file to display as the main page, with out this you GP wont know what to display.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+### Running Code locally:
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+
+1. Using Download:
+    1. Navigate to `https://github.com/danielclements/aim_trainer`.
+    2. Click the green button that says "Clone or Download".
+    3. Click download zip.
+    4. Extract zip file.
+    5. Import in to preferred IDE.
+
+2. Using Git Clone:
+    1. Open terminal in preferred IDE.
+    2. Type "git clone https://github.com/danielclements/aim_trainer"
 
 
 ## Credits
@@ -104,6 +114,9 @@ https://stackoverflow.com/questions/8126466/how-do-i-reset-the-setinterval-timer
 random bug : when looking at hits / misses at the end of 30 targets it always adds up to 31 for some reason , still working on this bug 
 
 bug : intro music on index page doesn't always play on page refresh 
+
+
+-hit sound from https://freesound.org/
 
 (or "8Bit Introduction" song) by Tristan Lohengrin : https://www.tristanlohengrin.com/
 
