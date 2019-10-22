@@ -1,6 +1,11 @@
+
+
 $( document ).ready(function() {
 
+    // calls the intro theme on page load 
     introMusic.play();
+
+// interval for the target spawner , calss the function every 1000ms
 
    setInterval(() => {
        targetSpawner();
@@ -13,6 +18,9 @@ $( document ).ready(function() {
     console.log( "ready!" );
 });
 
+
+
+// target spawner similar to the one used in the aim_trainer page. This function is called on the index page as a example of how the game works.
 
 function targetSpawner() {
 
@@ -32,6 +40,7 @@ function targetSpawner() {
   
 }
 
+//used to remove any excess targets that could be left with in the spawn area. 
 
 function killSwitch() {
     $("#targetIcon").remove();

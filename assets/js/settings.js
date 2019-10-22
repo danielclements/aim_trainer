@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    
+    // checks what the value of theme has been saved to and calls the correct theme 
 
     if (localStorage.getItem("theme") == "light") {
 
@@ -11,6 +11,8 @@ $(document).ready(function () {
 
         darkSwitch();
     };
+
+    //checks the value of audio to determine what function to call 
 
     if (localStorage.getItem("audio") == "off") {
 
@@ -48,6 +50,9 @@ gameTheme.volume = 0.09;
 
 
 // Themes 
+
+
+// toggles the theme  by adding a local storage item, used on page load to determine whether to load the light or dark theme 
 
 function lightSwitch() {
     localStorage.setItem("theme", "light");
@@ -93,6 +98,10 @@ function darkSwitch() {
 
 
 // audio toggle 
+
+
+// toggles volume off and on , again using local stoarge to store the audio state across both pages. Checks local storage item to
+// determine what audio function to call 
 
 function audioOff() {
     localStorage.setItem("audio", "off");
