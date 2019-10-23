@@ -32,9 +32,12 @@ const accuracyDom = $("#accuracy-counter")
 
 function difficultySelector() {
     if (localStorage.getItem("difficulty") == "pro") {
-        difficulty = 800;
+        difficulty = 700;
     } else if (localStorage.getItem("difficulty") == "beginner") {
-        difficulty = 1100
+        difficulty = 1000;
+    }else if (localStorage.getItem("difficulty") == "extreme"){
+        difficulty = 500;
+
     } else {
         difficulty = 800
     };
@@ -62,6 +65,7 @@ function targetSelector() {
 //as before the game would start as soon as the aim_trianer page was loaded and gave no good indication of game begining.
 
 function countDown() {
+    killSwitch();
     if (startingTimer > -1) {
         setTimeout(function () {
             if (startingTimer == 0) {

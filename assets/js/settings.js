@@ -28,8 +28,10 @@ $(document).ready(function () {
     if (localStorage.getItem("difficulty") == "beginner") {
         difficultyBeginner();
     } else if (localStorage.getItem("difficulty") == "pro") {
-        dificultyPro();
-    };
+        difficultyPro();
+    } else if (localStorage.getItem("difficulty") == "extreme"){
+        difficultyExtreme();
+    }
 
 
     //checks the value of target to determine what function to call 
@@ -149,11 +151,12 @@ function audioOn() {
 
 
 
-function dificultyPro() {
+function difficultyPro() {
     localStorage.setItem("difficulty", "pro");
 
     $("#pro").addClass("btn-success").removeClass("btn-secondary");
     $("#beginner").removeClass("btn-success").addClass("btn-secondary");
+    $("#extreme").removeClass("btn-success").addClass("btn-secondary");
 };
 
 
@@ -162,9 +165,18 @@ function difficultyBeginner() {
 
     $("#beginner").addClass("btn-success").removeClass("btn-secondary");
     $("#pro").addClass("btn-secondary").removeClass("btn-success");
+    $("#extreme").removeClass("btn-success").addClass("btn-secondary");
 };
 
  
+function difficultyExtreme(){
+localStorage.setItem("difficulty", "extreme")
+
+$("#extreme").addClass("btn-success").removeClass("btn-secondary");
+$("#beginner").addClass("btn-secondary").removeClass("btn-success");
+$("#pro").addClass("btn-secondary").removeClass("btn-success");
+
+};
 
 //target toggle that uses local storage to store the target state and apply it across both pages,
 // if statment called in the document ready function determines what to call 

@@ -233,61 +233,76 @@
             </div>
         </div>
         <div class=" offset-md-2 offset-lg-0 col-md-10 col-lg-3 p-0  d-flex  settings">
-            <div class="settings container-fluid">
-                <div class="row m-1 ">
-
-                    <div class="col-sm-3 col-lg-6 mt-5 settings-containers">
-                        <h6 class="header-game-mode white">Game Mode:</h6>
-                        <div style="display: flex; justify-content: center;">
-                            <button onclick="difficultyBeginner()" class="btn btn-secondary mt-3 btn-settings" id="beginner">Beginner</button>
-                            <button onclick="dificultyPro()" class="btn btn-success mt-3 ml-2 btn-settings" id="pro">Pro</button>
-                        </div>
-                    </div>
-
-                    <div class=" offset-sm-0 col-sm-3 offset-lg-1 col-lg-5 mt-5 settings-containers">
-                        <h6 class="header-game-mode white ">Sound:</h6>
-                        <div style="display: flex; justify-content: center;">
-                            <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
-                                id="audioOn">On</button>
-                            <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                id="audioOff">off</button>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-sm-3 col-lg-6  mt-5 settings-containers">
-                        <h6 class="header-game-mode white">Theme:</h6>
-                        <div style="display: flex; justify-content: center;">
-                            <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
-                                id="darkModeToggle">Dark</button>
-                            <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                id="lightModeToggle">Light</button>
-                        </div>
-                    </div>
-
-                    <div class="offset-1 col-sm-5 mt-5 settings-containers">
-                            <h6 class="header-game-mode white">Targets:</h6>
-                            <div style="display: flex; justify-content: center;">
-                                <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
-                                    id="alienToggle">Aliens</button>
-                                <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                    id="fruitToggle">Fruit</button>
+                <div class="settings container-fluid">
+                        <div class="row m-1 ">
+                            <div class="col-sm-9 col-md-7 settings-containers">
+                                <h6 class="header-game-mode white">Game Mode:</h6>
+                                <div style="display: flex; justify-content: center;">
+                                    <div>
+                                        <div class="row p-0 m-0">
+                                            <div class="col-sm-12 d-flex justify-content-around p-0">
+                                                <button onclick="difficultyBeginner()"
+                                                    class="btn btn-secondary mt-3 btn-settings" id="beginner">Easy</button>
+                                                <button onclick="difficultyPro()" class="btn btn-success mt-3 ml-2 btn-settings"
+                                                    id="pro">Pro</button>
+                                            </div>
+                                        </div>
+                                        <div class="row m-0 p-0 ">
+                                            <div class="col-sm-12 d-flex justify-content-center p-0">
+                                                <button onclick="difficultyExtreme()"
+                                                    class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                                    id="extreme">Extreme</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                    </div>
-
-
-                    <div class="offset-sm-5 col-sm-3 mt-5">
-                        <div style="display: flex; justify-content: center;">
-                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
-
+                            <div class="offset-1 col-sm-4 settings-containers">
+                                <h6 class="header-game-mode white ">Sound:</h6>
+                                <div class="d-flex justify-content-center mt-4" >
+                                    <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
+                                        id="audioOn">On</button>
+                                    <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                        id="audioOff">off</button>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="row m-1">
+                            <div class="col-sm-6 mt-5 settings-containers">
+                                <h6 class="header-game-mode white">Theme:</h6>
+                                <div style="display: flex; justify-content: center;">
+                                    <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
+                                        id="darkModeToggle">Dark</button>
+                                    <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                        id="lightModeToggle">Light</button>
+                                </div>
+                            </div>
+        
+        
+                            <div class="offset-1 col-sm-5 mt-5 settings-containers">
+                                <h6 class="header-game-mode white">Targets:</h6>
+                                <div style="display: flex; justify-content: center;">
+                                    <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
+                                        id="alienToggle">Aliens</button>
+                                    <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                        id="fruitToggle">Fruit</button>
+                                </div>
+                            </div>
+        
+        
+                        </div>
+        
+                        <div class="row m-1">
+                            <div class="offset-4 col-sm-5 mt-5">
+                                <div style="display: flex; justify-content: center;">
+                                    <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-
-            </div>
         </div>
 
 
