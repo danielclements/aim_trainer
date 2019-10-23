@@ -225,7 +225,7 @@ function fruitRandomizer() {
 
 
     if (numberGen == 1) {
-        var target = '<img src="assets/images/targets/8-BitBanana.png">';
+        var target = '<img src="assets/images/targets/8-bitBanana.png">';
         return (target);
     } else if (numberGen == 2) {
         var target = '<img src="assets/images/targets/8-bitCherry.png">';
