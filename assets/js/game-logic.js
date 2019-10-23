@@ -5,12 +5,12 @@ $(document).ready(function () {
 
 // Variables 
 
-var difficulty = 900
+var difficulty = 1000;
 
 var hitCounter = 0;
 var timerPro = new Timer(function () {
     targetSpawner();
-}, difPro);
+}, difficulty);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -20,6 +20,7 @@ const targetId = $("#targetIcon");
 const hitDom = $("#hit-counter");
 const missDom = $("#missed-counter");
 const accuracyDom = $("#accuracy-counter")
+
 
 
 
@@ -38,7 +39,7 @@ function targetSpawner() {
         killSwitch();
         timerPro.stop();
         timerPro.start();
-        $(spawner()).append('<div class="fas fa-bullseye target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon"></div>');
+        $(spawner()).append(`<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon">${fruitRandomizer()}</div>`);
         spawnCount++;
         failedHitDomPusher();
         accuracyCalc();
@@ -54,7 +55,7 @@ function targetSpawner() {
         accuracyCalc();
 
 
-     //after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
+     // after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
      // stopping the timer stops the interval from calling the spawner function again
      // then calls the failedHitFinal function to display the amount of targets missed
     } else {
@@ -177,3 +178,29 @@ function Timer(fn, t) {
         return this.stop().start();
     }
 }
+
+
+
+// target selector function uses a 
+
+function fruitRandomizer(){
+
+var numberGen = Math.floor((Math.random() * 3) + 1);
+
+
+
+if( numberGen == 1){
+    var target = '<img src="assets/images/targets/8-BitBanana.png">';
+    return(target);
+}
+
+else if (numberGen == 2){
+    var target = '<img src="assets/images/targets/8-bitCherry.png">';
+    return(target);
+}
+
+else{
+    var target = '<img src="assets/images/targets/8-bitWatermelon.png">';
+    return(target);
+}
+} ;
