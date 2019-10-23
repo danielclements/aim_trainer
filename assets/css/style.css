@@ -80,6 +80,7 @@ body {
 }
 
 .stats {
+    font-family: 'Share Tech Mono', monospace;
     text-align: center;
     width: 150px;
     background-color: transparent;
