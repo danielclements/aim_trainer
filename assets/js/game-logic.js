@@ -1,11 +1,14 @@
 $(document).ready(function () {
     gameTheme.play();
+
+
+   
 });
 
 
 // Variables 
 
-var difficulty = 1000;
+var difficulty = difficultySelector();
 
 var hitCounter = 0;
 var timerPro = new Timer(function () {
@@ -23,6 +26,17 @@ const accuracyDom = $("#accuracy-counter")
 
 var startingTimer = 3;
 countDown();
+
+
+function difficultySelector(){
+    if (localStorage.getItem("difficulty") == "pro") {
+        difficulty = 700;
+    } else if (localStorage.getItem("difficulty") == "beginner") {
+        difficulty = 1100
+    };
+
+    return(difficulty);
+};
 
 function countDown() {
     if (startingTimer > -1) {
@@ -76,9 +90,9 @@ function targetSpawner() {
         accuracyCalc();
 
 
-     // after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
-     // stopping the timer stops the interval from calling the spawner function again
-     // then calls the failedHitFinal function to display the amount of targets missed
+        // after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
+        // stopping the timer stops the interval from calling the spawner function again
+        // then calls the failedHitFinal function to display the amount of targets missed
     } else {
         killSwitch();
         timerPro.stop();
@@ -125,12 +139,12 @@ function successfulHit() {
 
 function failedHit() {
     var missCounter = (spawnCount - 1) - hitCounter;
-   return(missCounter)
+    return (missCounter)
 };
 
 //function used to update the dom with the vaule of failedHit function
 
-function failedHitDomPusher(){
+function failedHitDomPusher() {
     missDom.text(failedHit());
 };
 
@@ -162,13 +176,13 @@ function accuracyCalc() {
     var accuracyTotal = hits * 100 / spawned;
     var accuracyRounded = Math.round(accuracyTotal * 100) / 100;
 
-    return(accuracyRounded); 
+    return (accuracyRounded);
 };
 
 
 //function used to push the accuracy percentage to the Dom.
 
-function accuracyDomPusher(){
+function accuracyDomPusher() {
     accuracyDom.text(accuracyCalc(), '%');
 };
 // Timer function to reset the interval everytime a target is hit. (by jfriend00 on Stack Overflow) credit in read me 
@@ -204,24 +218,20 @@ function Timer(fn, t) {
 
 // target selector function uses a 
 
-function fruitRandomizer(){
+function fruitRandomizer() {
 
-var numberGen = Math.floor((Math.random() * 3) + 1);
+    var numberGen = Math.floor((Math.random() * 3) + 1);
 
 
 
-if( numberGen == 1){
-    var target = '<img src="assets/images/targets/8-BitBanana.png">';
-    return(target);
-}
-
-else if (numberGen == 2){
-    var target = '<img src="assets/images/targets/8-bitCherry.png">';
-    return(target);
-}
-
-else{
-    var target = '<img src="assets/images/targets/8-bitWatermelon.png">';
-    return(target);
-}
-} ;
+    if (numberGen == 1) {
+        var target = '<img src="assets/images/targets/8-BitBanana.png">';
+        return (target);
+    } else if (numberGen == 2) {
+        var target = '<img src="assets/images/targets/8-bitCherry.png">';
+        return (target);
+    } else {
+        var target = '<img src="assets/images/targets/8-bitWatermelon.png">';
+        return (target);
+    }
+};

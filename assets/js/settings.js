@@ -22,6 +22,13 @@ $(document).ready(function () {
         audioOn();
 
     };
+
+
+    if (localStorage.getItem("difficulty") == "beginner"){
+        difficultyBeginner();
+    } else if (localStorage.getItem("difficulty") == "pro"){
+        dificultyPro();
+    }
 });
 
 
@@ -125,3 +132,23 @@ function audioOn() {
     hitSound.volume = 0.09;
     gameTheme.volume = 0.09;
 }
+
+
+//dificulty toggle
+
+
+
+function dificultyPro(){
+localStorage.setItem("difficulty", "pro");
+
+$("#pro").addClass("btn-success").removeClass("btn-secondary");
+$("#beginner").removeClass("btn-success").addClass("btn-secondary");
+};
+
+
+function difficultyBeginner(){
+    localStorage.setItem("difficulty", "beginner");
+
+    $("#beginner").addClass("btn-success").removeClass("btn-secondary");
+    $("#pro").addClass("btn-secondary").removeClass("btn-success");
+};
