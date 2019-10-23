@@ -152,3 +152,22 @@ function difficultyBeginner(){
     $("#beginner").addClass("btn-success").removeClass("btn-secondary");
     $("#pro").addClass("btn-secondary").removeClass("btn-success");
 };
+
+
+
+//target toggle
+
+function alienTargets(){
+    localStorage.setItem("target", "alien");
+    
+    $("#alienToggle").addClass("btn-success").removeClass("btn-secondary");
+    $("#fruitToggle").removeClass("btn-success").addClass("btn-secondary");
+    };
+    
+    
+    function fruitTargets(){
+        localStorage.setItem("target", "fruit");
+    
+        $("#fruitToggle").addClass("btn-success").removeClass("btn-secondary");
+        $("#alienToggle").addClass("btn-secondary").removeClass("btn-success");
+    };

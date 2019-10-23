@@ -18,25 +18,50 @@ var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
 var playerName = "Player_1";
+var startingTimer = 3;
+countDown();
 
 const targetId = $("#targetIcon");
 const hitDom = $("#hit-counter");
 const missDom = $("#missed-counter");
 const accuracyDom = $("#accuracy-counter")
 
-var startingTimer = 3;
-countDown();
 
+
+
+//difficulty selector 
 
 function difficultySelector(){
     if (localStorage.getItem("difficulty") == "pro") {
-        difficulty = 700;
+        difficulty = 800;
     } else if (localStorage.getItem("difficulty") == "beginner") {
         difficulty = 1100
+    }
+
+    else{
+        difficulty = 800
     };
 
     return(difficulty);
 };
+
+// targets selector
+
+function targetSelector(){
+
+    if (localStorage.getItem("target") == "alien"){
+        return(alienRandomizer());
+    } else if (localStorage.getItem("target") == "fruit"){
+        return(fruitRandomizer());
+    }
+
+    else{
+        return(alienRandomizer());
+    }
+};
+
+
+//countdown
 
 function countDown() {
     if (startingTimer > -1) {
@@ -56,7 +81,7 @@ function countDown() {
             }
         }, 500);
     }
-}
+};
 
 
 
@@ -74,7 +99,7 @@ function targetSpawner() {
         killSwitch();
         timerPro.stop();
         timerPro.start();
-        $(spawner()).append(`<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon">${fruitRandomizer()}</div>`);
+        $(spawner()).append(`<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon">${targetSelector()}</div>`);
         spawnCount++;
         failedHitDomPusher();
         accuracyCalc();
@@ -216,7 +241,10 @@ function Timer(fn, t) {
 
 
 
-// target selector function uses a 
+// target selector function uses a random number generator to decide what target to display 
+
+
+
 
 function fruitRandomizer() {
 
@@ -228,10 +256,30 @@ function fruitRandomizer() {
         var target = '<img src="assets/images/targets/8-bitBanana.png">';
         return (target);
     } else if (numberGen == 2) {
-        var target = '<img src="assets/images/targets/8-bitCherry.png">';
+        var target = '<img src="assets/images/targets/8-BitCherry.png">';
         return (target);
     } else {
         var target = '<img src="assets/images/targets/8-bitWatermelon.png">';
+        return (target);
+    }
+};
+
+
+
+function alienRandomizer() {
+
+    var numberGen = Math.floor((Math.random() * 3) + 1);
+
+
+
+    if (numberGen == 1) {
+        var target = '<img src="assets/images/targets/boss-1.png">';
+        return (target);
+    } else if (numberGen == 2) {
+        var target = '<img src="assets/images/targets/boss-2.png">';
+        return (target);
+    } else {
+        var target = '<img src="assets/images/targets/boss-3.png">';
         return (target);
     }
 };
