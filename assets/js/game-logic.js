@@ -5,10 +5,12 @@ $(document).ready(function () {
 
 // Variables 
 
+var difficulty = 900
+
 var hitCounter = 0;
 var timerPro = new Timer(function () {
     targetSpawner();
-}, 900);
+}, difPro);
 var spawnCount = 0;
 var gameState = false;
 var gameOutCome;
@@ -95,8 +97,8 @@ function successfulHit() {
 
 
 // simple function to determine how many tagets have been missed , gets the value of spawnCount then subtracts the value of hit counter,
-//function will return the amount of targets that have been missed. 
-//the function was cause a few issues, as soon as the first target spawns the game was displaying you had already missed a target this is 
+// function will return the amount of targets that have been missed. 
+// the function was causing a few issues, as soon as the first target spawns the game was displaying you had already missed a target this is 
 // the reason we subtract 1 to the spawnCount 
 
 function failedHit() {
