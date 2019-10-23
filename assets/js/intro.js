@@ -3,7 +3,8 @@
 $( document ).ready(function() {
 
     // calls the intro theme on page load 
-    introMusic.play();
+
+    setTimeout(function(){ introMusic.play(); }, 1500);
 
 // interval for the target spawner , calss the function every 1000ms
 
