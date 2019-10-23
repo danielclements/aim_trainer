@@ -21,7 +21,28 @@ const hitDom = $("#hit-counter");
 const missDom = $("#missed-counter");
 const accuracyDom = $("#accuracy-counter")
 
+var startingTimer = 3;
+countDown();
 
+function countDown() {
+    if (startingTimer > -1) {
+        setTimeout(function () {
+            if (startingTimer == 0) {
+                $('#spawn-point-67').html('<p class="text-light count-down-text">go</p>');
+                setTimeout(function () {
+                    $('#spawn-point-67').html('');
+                    timerPro.start();
+                }, 500)
+            }
+            if (startingTimer !== 0) {
+                timerPro.stop();
+                $('#spawn-point-67').html(`<p class="text-light count-down-text">${startingTimer}</p>`);
+                startingTimer--;
+                countDown();
+            }
+        }, 500);
+    }
+}
 
 
 

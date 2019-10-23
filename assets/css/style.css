@@ -211,7 +211,10 @@ body {
     color: #f82c2c;
 }
 
-
+.count-down-text{
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+}
 
 /* colors */
 
