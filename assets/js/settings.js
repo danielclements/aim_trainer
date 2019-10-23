@@ -5,7 +5,7 @@ $(document).ready(function () {
     if (localStorage.getItem("theme") == "light") {
 
         lightSwitch();
-        
+
     } else if (localStorage.getItem("theme") == "dark") {
 
 
@@ -23,12 +23,22 @@ $(document).ready(function () {
 
     };
 
+    //checks the value of difficulty to determine what function to call 
 
-    if (localStorage.getItem("difficulty") == "beginner"){
+    if (localStorage.getItem("difficulty") == "beginner") {
         difficultyBeginner();
-    } else if (localStorage.getItem("difficulty") == "pro"){
+    } else if (localStorage.getItem("difficulty") == "pro") {
         dificultyPro();
-    }
+    };
+
+
+    //checks the value of target to determine what function to call 
+
+    if (localStorage.getItem("target") == "alien") {
+        alienTargets();
+    } else if (localStorage.getItem("target") == "fruit") {
+        fruitTargets();
+    };
 });
 
 
@@ -134,40 +144,43 @@ function audioOn() {
 }
 
 
-//dificulty toggle
+//dificulty toggle that uses local storage to store the difficulty state and apply it across both pages,
+// if statment called in the document ready function determines what to call 
 
 
 
-function dificultyPro(){
-localStorage.setItem("difficulty", "pro");
+function dificultyPro() {
+    localStorage.setItem("difficulty", "pro");
 
-$("#pro").addClass("btn-success").removeClass("btn-secondary");
-$("#beginner").removeClass("btn-success").addClass("btn-secondary");
+    $("#pro").addClass("btn-success").removeClass("btn-secondary");
+    $("#beginner").removeClass("btn-success").addClass("btn-secondary");
 };
 
 
-function difficultyBeginner(){
+function difficultyBeginner() {
     localStorage.setItem("difficulty", "beginner");
 
     $("#beginner").addClass("btn-success").removeClass("btn-secondary");
     $("#pro").addClass("btn-secondary").removeClass("btn-success");
 };
 
+ 
+
+//target toggle that uses local storage to store the target state and apply it across both pages,
+// if statment called in the document ready function determines what to call 
 
 
-//target toggle
-
-function alienTargets(){
+function alienTargets() {
     localStorage.setItem("target", "alien");
-    
+
     $("#alienToggle").addClass("btn-success").removeClass("btn-secondary");
     $("#fruitToggle").removeClass("btn-success").addClass("btn-secondary");
-    };
-    
-    
-    function fruitTargets(){
-        localStorage.setItem("target", "fruit");
-    
-        $("#fruitToggle").addClass("btn-success").removeClass("btn-secondary");
-        $("#alienToggle").addClass("btn-secondary").removeClass("btn-success");
-    };
+};
+
+
+function fruitTargets() {
+    localStorage.setItem("target", "fruit");
+
+    $("#fruitToggle").addClass("btn-success").removeClass("btn-secondary");
+    $("#alienToggle").addClass("btn-secondary").removeClass("btn-success");
+};

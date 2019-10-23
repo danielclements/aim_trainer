@@ -1,22 +1,22 @@
-
-
-$( document ).ready(function() {
+$(document).ready(function () {
 
     // calls the intro theme on page load 
 
-    setTimeout(function(){ introMusic.play(); }, 1500);
+    setTimeout(function () {
+        introMusic.play();
+    }, 1500);
 
-// interval for the target spawner , calss the function every 1000ms
+    // interval for the target spawner , calss the function every 1000ms
 
-   setInterval(() => {
-       targetSpawner();
-       
-   }, 1000);
-    
+    setInterval(() => {
+        targetSpawner();
 
-    
+    }, 1000);
 
-    console.log( "ready!" );
+
+
+
+    console.log("ready!");
 });
 
 
@@ -37,8 +37,8 @@ function targetSpawner() {
     $(spawnPoint).append('<div class="intro-target" id="targetIcon"> <i class="fas fa-bullseye target"></i></div>');
 
 
-    
-  
+
+
 }
 
 //used to remove any excess targets that could be left with in the spawn area. 

@@ -1,8 +1,5 @@
 $(document).ready(function () {
     gameTheme.play();
-
-
-   
 });
 
 
@@ -29,39 +26,40 @@ const accuracyDom = $("#accuracy-counter")
 
 
 
-//difficulty selector 
+// difficulty selector  uses the local storage item set on the index page to determine what difficulty to start at,
+// if no difficulty is selected it automatically selects 800ms aka Pro 
+// it automatically selects pro difficulty as this is the default on first time load .
 
-function difficultySelector(){
+function difficultySelector() {
     if (localStorage.getItem("difficulty") == "pro") {
         difficulty = 800;
     } else if (localStorage.getItem("difficulty") == "beginner") {
         difficulty = 1100
-    }
-
-    else{
+    } else {
         difficulty = 800
     };
 
-    return(difficulty);
+    return (difficulty);
 };
 
-// targets selector
+// targets selector uses local storage to determine the value of target to determine what targets to display on screen
+// if not targets are selected on the index page resulting in no local store items being saved,
+// it automatically selects Alien targets as this is the default on first time load.
 
-function targetSelector(){
+function targetSelector() {
 
-    if (localStorage.getItem("target") == "alien"){
-        return(alienRandomizer());
-    } else if (localStorage.getItem("target") == "fruit"){
-        return(fruitRandomizer());
-    }
-
-    else{
-        return(alienRandomizer());
+    if (localStorage.getItem("target") == "alien") {
+        return (alienRandomizer());
+    } else if (localStorage.getItem("target") == "fruit") {
+        return (fruitRandomizer());
+    } else {
+        return (alienRandomizer());
     }
 };
 
 
-//countdown
+//countdown function used to start a 3, 2 ,1 go at the start of the game, 
+//as before the game would start as soon as the aim_trianer page was loaded and gave no good indication of game begining.
 
 function countDown() {
     if (startingTimer > -1) {
@@ -144,7 +142,7 @@ function killSwitch() {
 
 
 
-// functions to record successful hits / every time a target is missed / Accuracy calc 
+
 
 
 
@@ -239,12 +237,9 @@ function Timer(fn, t) {
     }
 }
 
-
-
-// target selector function uses a random number generator to decide what target to display 
-
-
-
+// fruitRandomizer uses  math.random to calculate a number between 1 - 3
+// each fruit is assigned to a diffrent number, using a simple if statment the function will
+// determine what fruit to show.
 
 function fruitRandomizer() {
 
@@ -264,7 +259,9 @@ function fruitRandomizer() {
     }
 };
 
-
+// alienRandomizer uses math.random to calculate a number between 1 - 3
+// each alien is assigned to a diffrent number, using a simple if statment the function will
+// determine what alien to show.
 
 function alienRandomizer() {
 
