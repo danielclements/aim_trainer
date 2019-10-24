@@ -257,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="offset-1 col-sm-5 col-md-4 settings-containers">
+                    <div class="offset-1 col-sm-5 col-md-5 settings-containers">
                         <h6 class="header-game-mode white ">Sound:</h6>
                         <div class="d-flex justify-content-center mt-4">
                             <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
@@ -270,7 +270,20 @@
                 </div>
 
                 <div class="row m-1">
-                    <div class="col-sm-6 col-md-4 mt-5 settings-containers">
+
+
+                    <div class="col-sm-5  col-md-6  mt-5 settings-containers">
+                        <h6 class="header-game-mode white">Targets:</h6>
+                        <div style="display: flex; justify-content: center;">
+                            <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
+                                id="alienToggle">Aliens</button>
+                            <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                id="fruitToggle">Fruit</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6  offset-md-1 col-md-5 mt-5 settings-containers">
                         <h6 class="header-game-mode white">Theme:</h6>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
@@ -281,15 +294,7 @@
                     </div>
 
 
-                    <div class="offset-1 col-sm-5  col-md-4 mt-5 settings-containers">
-                        <h6 class="header-game-mode white">Targets:</h6>
-                        <div style="display: flex; justify-content: center;">
-                            <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
-                                id="alienToggle">Aliens</button>
-                            <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                id="fruitToggle">Fruit</button>
-                        </div>
-                    </div>
+
 
 
                 </div>
@@ -319,8 +324,8 @@
 
         <!-- end of game modal -->
 
-        <div class="modal fade" id="summaryModal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="summaryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -338,7 +343,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        
+
                         <button src="aim_trainer.html" type="button" class="btn btn-primary">Replay!</button>
                     </div>
                 </div>
