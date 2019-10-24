@@ -101,20 +101,19 @@ function targetSpawner() {
         killSwitch();
         timerPro.stop();
         timerPro.start();
-        $(spawner()).append(`<div class="target" onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); "   id="targetIcon">${targetSelector()}</div>`);
+        $(spawner()).append(`<div class="target"    id="targetIcon">${targetSelector()}</div>`);
         spawnCount++;
-        failedHitDomPusher();
-        accuracyCalc();
+        accuracyDomPusher();
 
-    } else if (spawnCount = 30) {
-        killSwitch();
-        timerPro.stop();
-        timerPro.start();
-        // changed the onlick on target to stop spawning further tagets on click 
-        $(spawner()).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch(); failedHit();"   id="targetIcon"></div>`);
-        spawnCount++;
-        failedHitDomPusher();
-        accuracyCalc();
+    // } else if (spawnCount = 30) {
+    //     killSwitch();
+    //     timerPro.stop();
+    //     timerPro.start();
+    //     // changed the onlick on target to stop spawning further tagets on click 
+    //     $(spawner()).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch(); failedHit();"   id="targetIcon"></div>`);
+    //     spawnCount++;
+    //     failedHitDomPusher();
+    //     accuracyCalc();
 
 
         // after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
@@ -123,7 +122,17 @@ function targetSpawner() {
     } else {
         killSwitch();
         timerPro.stop();
+        failedHit();
         failedHitFinal();
+        setTimeout(function () {
+            
+            $('#summaryModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }, 200);
+
+       
     }
 };
 
@@ -210,7 +219,7 @@ function accuracyCalc() {
 //function used to push the accuracy percentage to the Dom.
 
 function accuracyDomPusher() {
-    accuracyDom.text(accuracyCalc(), '%');
+    accuracyDom.text(accuracyCalc());
 };
 // Timer function to reset the interval everytime a target is hit. (by jfriend00 on Stack Overflow) credit in read me 
 
@@ -252,13 +261,13 @@ function fruitRandomizer() {
 
 
     if (numberGen == 1) {
-        var target = '<img src="assets/images/targets/8-bitBanana.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-bitBanana.png">';
         return (target);
     } else if (numberGen == 2) {
-        var target = '<img src="assets/images/targets/8-BitCherry.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-BitCherry.png">';
         return (target);
     } else {
-        var target = '<img src="assets/images/targets/8-bitWatermelon.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-bitWatermelon.png">';
         return (target);
     }
 };
@@ -274,13 +283,13 @@ function alienRandomizer() {
 
 
     if (numberGen == 1) {
-        var target = '<img src="assets/images/targets/boss-1.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/boss-1.png">';
         return (target);
     } else if (numberGen == 2) {
-        var target = '<img src="assets/images/targets/boss-2.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/boss-2.png">';
         return (target);
     } else {
-        var target = '<img src="assets/images/targets/boss-3.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/boss-3.png">';
         return (target);
     }
 };

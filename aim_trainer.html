@@ -27,7 +27,7 @@
 
         </div>
     </div>
-    <div class="main-container row container-fluid">
+    <div class="main-container row container-fluid mb-0 mr-0 ml-0">
 
 
         <div class="col-md-2 col-lg-3 container-fluid">
@@ -42,13 +42,13 @@
                         <p class="stat-hits stats ">Hits: <span id="hit-counter"></span></p>
                     </div>
 
-                    <div class="stats-container">
-                        <p class="stat-missed stats">missed: <span id="missed-counter"></span></p>
-                    </div>
-
                     <!-- <div class="stats-container">
-                    <p class="stat-accuracy stats"> Accuracy: <br> <span id="accuracy-counter"></span>%</p>
-                </div> -->
+                        <p class="stat-missed stats">missed: <span id="missed-counter"></span></p>
+                    </div> -->
+
+                    <div class="stats-container">
+                        <p class="stat-accuracy stats"> Accuracy: <br> <span id="accuracy-counter"></span>%</p>
+                    </div>
 
                     <div class="stats-container">
                         <div class="high-score stats">High_Score
@@ -232,83 +232,84 @@
                 </div>
             </div>
         </div>
-        <div class=" offset-md-2 offset-lg-0 col-md-10 col-lg-3 p-0  d-flex  settings">
-                <div class="settings container-fluid p-0">
-                        <div class="row m-1 ">
-                            <div class="col-sm-9 col-md-6 settings-containers">
-                                <h6 class="header-game-mode white">Game Mode:</h6>
-                                <div style="display: flex; justify-content: center;">
-                                    <div>
-                                        <div class="row p-0 m-0">
-                                            <div class="col-sm-12 d-flex justify-content-around p-0">
-                                                <button onclick="difficultyBeginner()"
-                                                    class="btn btn-secondary mt-3 btn-settings" id="beginner">Easy</button>
-                                                <button onclick="difficultyPro()" class="btn btn-success mt-3 ml-2 btn-settings"
-                                                    id="pro">Pro</button>
-                                            </div>
-                                        </div>
-                                        <div class="row m-0 p-0 ">
-                                            <div class="col-sm-12 d-flex justify-content-center p-0">
-                                                <button onclick="difficultyExtreme()"
-                                                    class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                                    id="extreme">Extreme</button>
-                                            </div>
-                                        </div>
+        <div class="offset-md-2  offset-lg-0 col-lg-3 col-md-8 p-0 d-flex mb-3 settings">
+            <div class="settings container-fluid p-0">
+                <div class="row m-1 ">
+                    <div class="col-sm-9 col-md-4 col-lg-6 settings-containers">
+                        <h6 class="header-game-mode white">Game Mode:</h6>
+                        <div style="display: flex; justify-content: center;">
+                            <div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-sm-12 d-flex justify-content-around p-0">
+                                        <button onclick="difficultyBeginner()"
+                                            class="btn btn-secondary mt-3 btn-settings" id="beginner">Easy</button>
+                                        <button onclick="difficultyPro()" class="btn btn-success mt-3 ml-2 btn-settings"
+                                            id="pro">Pro</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="offset-1 col-sm-5 settings-containers">
-                                <h6 class="header-game-mode white ">Sound:</h6>
-                                <div class="d-flex justify-content-center mt-4" >
-                                    <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
-                                        id="audioOn">On</button>
-                                    <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                        id="audioOff">off</button>
-                                </div>
-                            </div>
-        
-                        </div>
-        
-                        <div class="row m-1">
-                            <div class="col-sm-6 mt-5 settings-containers">
-                                <h6 class="header-game-mode white">Theme:</h6>
-                                <div style="display: flex; justify-content: center;">
-                                    <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
-                                        id="darkModeToggle">Dark</button>
-                                    <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                        id="lightModeToggle">Light</button>
-                                </div>
-                            </div>
-        
-        
-                            <div class="offset-1 col-sm-5 mt-5 settings-containers">
-                                <h6 class="header-game-mode white">Targets:</h6>
-                                <div style="display: flex; justify-content: center;">
-                                    <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
-                                        id="alienToggle">Aliens</button>
-                                    <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
-                                        id="fruitToggle">Fruit</button>
-                                </div>
-                            </div>
-        
-        
-                        </div>
-        
-                        <div class="row m-1">
-                            <div class="offset-4 col-sm-5 mt-5">
-                                <div style="display: flex; justify-content: center;">
-                                    <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
-        
+                                <div class="row m-0 p-0 ">
+                                    <div class="col-sm-12 d-flex justify-content-center p-0">
+                                        <button onclick="difficultyExtreme()"
+                                            class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                            id="extreme">Extreme</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="offset-1 col-sm-5 col-md-4 settings-containers">
+                        <h6 class="header-game-mode white ">Sound:</h6>
+                        <div class="d-flex justify-content-center mt-4">
+                            <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
+                                id="audioOn">On</button>
+                            <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                id="audioOff">off</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row m-1">
+                    <div class="col-sm-6 col-md-4 mt-5 settings-containers">
+                        <h6 class="header-game-mode white">Theme:</h6>
+                        <div style="display: flex; justify-content: center;">
+                            <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
+                                id="darkModeToggle">Dark</button>
+                            <button onclick="lightSwitch()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                id="lightModeToggle">Light</button>
+                        </div>
+                    </div>
+
+
+                    <div class="offset-1 col-sm-5  col-md-4 mt-5 settings-containers">
+                        <h6 class="header-game-mode white">Targets:</h6>
+                        <div style="display: flex; justify-content: center;">
+                            <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
+                                id="alienToggle">Aliens</button>
+                            <button onclick="fruitTargets()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                                id="fruitToggle">Fruit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row m-1">
+                    <div class="offset-2 col-sm-5 mt-2">
+                        <div style="display: flex; justify-content: center;">
+                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
         <footer>
             <div class="footer-container container-fluid">
-                
+
 
             </div>
 
@@ -316,11 +317,46 @@
 
 
 
+        <!-- end of game modal -->
+
+        <div class="modal fade" id="summaryModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <p>Player:<span id="player-name-modal"></span></p>
+                        <p>Total Hits: <span id="total-hit-modal"></span></p>
+                        <p>Total Misses:<span id="total-misses-modal"></span></p>
+                        <p>Accuracy:<span id="accuracy-modal"></span></p>
+
+                    </div>
+                    <div class="modal-footer">
+                        
+                        <button src="aim_trainer.html" type="button" class="btn btn-primary">Replay!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/settings.js"></script>
         <script type="text/javascript" src="assets/js/game-logic.js"></script>
 
 
+        <!-- Bootstrap js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 </body>
 
 

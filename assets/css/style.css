@@ -264,7 +264,7 @@ body {
     border-radius: 1%;
     padding-top: 15px;
     padding-bottom: 30px;
-    width: 100%;
+    
     margin-left: 15px;
     margin-right: 15px;
   
@@ -381,3 +381,11 @@ body {
         font-size: 15px;
     }
   }
+
+
+  @media  screen and (max-width: 768x) {
+    
+    .spawn-point{
+        height: 5px;
+    }
+  };
