@@ -246,10 +246,10 @@
 
                 </div>
 
-                <div class="row m-1">
+                <div class="row m-1 pb-3 ">
 
 
-                    <div class="col-sm-5  col-md-6  mt-5 settings-containers">
+                    <div class="col-sm-5  col-md-6  mt-5  mb-1 settings-containers">
                         <h6 class="header-game-mode white">Targets:</h6>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
@@ -260,7 +260,7 @@
                     </div>
 
 
-                    <div class="col-sm-6  offset-md-1 col-md-5 mt-5 settings-containers">
+                    <div class="col-sm-6  offset-md-1 col-md-5 mb-1 mt-5 settings-containers">
                         <h6 class="header-game-mode white">Theme:</h6>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
@@ -274,12 +274,22 @@
 
 
 
+
+
                 </div>
 
                 <div class="row m-1">
-                    <div class="offset-2 col-sm-5 mt-2">
+
+                        <div class="col-sm-6 col-md-6 mt-2  settings-containers">
+                                <h6 class="header-game-mode white">Username:</h6>
+                                <div style="display: flex; justify-content: center;">
+                                <input type="text" class="user-name mt-3" id="player-user" value="Player_1"
+                               />
+                                </div>
+                        </div>
+                    <div class="offset-1 col-sm-5 mt-1">
                         <div style="display: flex; justify-content: center;">
-                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings">Play!</a>
+                            <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings" id="game-start">Play!</a>
 
                         </div>
                     </div>

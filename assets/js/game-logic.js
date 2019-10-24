@@ -22,7 +22,7 @@ const targetId = $("#targetIcon");
 const hitDom = $("#hit-counter");
 const missDom = $("#missed-counter");
 const accuracyDom = $("#accuracy-counter")
-
+const userName = $("#player-user").val();
 
 
 
@@ -126,6 +126,7 @@ function targetSpawner() {
         failedHitFinal();
         setTimeout(function () {
             
+            endGameModal();
             $('#summaryModal').modal({
                 backdrop: 'static',
                 keyboard: false
@@ -189,6 +190,7 @@ function failedHitDomPusher() {
 function failedHitFinal() {
     var missCounter = spawnCount - hitCounter;
     missDom.text(missCounter);
+    return(missCounter);
 };
 
 
@@ -209,7 +211,7 @@ function accuracyCalc() {
     hits = hitCounter;
     spawned = spawnCount;
 
-    var accuracyTotal = hits * 100 / spawned;
+    var accuracyTotal = hits * 100 / (spawned -1 );
     var accuracyRounded = Math.round(accuracyTotal * 100) / 100;
 
     return (accuracyRounded);
@@ -292,4 +294,13 @@ function alienRandomizer() {
         var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/boss-3.png">';
         return (target);
     }
+};
+
+
+
+function endGameModal(){
+    $("#player-name-modal").text(localStorage.getItem("username"));
+    $("#total-hit-modal").text(hitCounter);
+    $("#total-misses-modal").text(failedHitFinal);
+    $("#accuracy-modal").text(accuracyCalc());
 };

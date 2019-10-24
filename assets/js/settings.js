@@ -44,6 +44,10 @@ $(document).ready(function () {
 });
 
 
+// 
+
+var userIntro = $("#player-user").val();
+
 // Audio
 
 
@@ -86,12 +90,12 @@ function lightSwitch() {
     $(".index-header").addClass("index-header-light");
     $(".about-para").removeClass("white");
     $(".rules-header").removeClass("white");
-    $("#player-user").addClass("user-name-light").removeClass("user-name");
+    $("#player-user").addClass("user-name-light");
     $(".stat-hits").addClass("btn-success").removeClass("stat-hits").addClass("stat-hits-light");
     $(".stat-missed").addClass("btn-danger").removeClass("stat-missed").addClass("stat-missed-light");
     $(".high-score").addClass("high-score-light");
     $("#stats-header").removeClass("white");
-}
+};
 
 
 function darkSwitch() {
@@ -107,12 +111,12 @@ function darkSwitch() {
     $(".index-header").removeClass("index-header-light");
     $(".about-para").addClass("white");
     $(".rules-header").addClass("white");
-    $("#player-user").removeClass("user-name-light").addClass("user-name");
+    $("#player-user").removeClass("user-name-light")
     $(".stat-hits-light").removeClass("btn-success").addClass("stat-hits").removeClass("stat-hits-light");
     $(".stat-missed-light").removeClass("btn-danger").addClass("stat-missed").removeClass("stat-missed-light");
     $(".high-score-light").removeClass("high-score-light");
     $("#stats-header").addClass("white");
-}
+};
 
 
 
@@ -130,7 +134,7 @@ function audioOff() {
     hitSound.volume = 0;
     introMusic.volume = 0;
     gameTheme.volume = 0;
-}
+};
 
 
 function audioOn() {
@@ -143,7 +147,7 @@ function audioOn() {
     introMusic.volume = 0.09;
     hitSound.volume = 0.09;
     gameTheme.volume = 0.09;
-}
+};
 
 
 //dificulty toggle that uses local storage to store the difficulty state and apply it across both pages,
@@ -195,4 +199,14 @@ function fruitTargets() {
 
     $("#fruitToggle").addClass("btn-success").removeClass("btn-secondary");
     $("#alienToggle").addClass("btn-secondary").removeClass("btn-success");
+};
+
+
+
+$("#game-start").click(function(){
+    userNameStorage();
+});
+
+function userNameStorage(){
+    localStorage.setItem("username", userIntro);
 };

@@ -35,9 +35,11 @@
             <div class="p-3  d-flex justify-content-center">
 
                 <div class="test">
-                    <h6 class="white" id="stats-header" style="margin-bottom: 40px;">Stats:</h6>
-                    <input type="text" class="user-name stats" id="player-user" value="Player_1"
-                        style="margin-bottom: 40px;" />
+                        <div class="stats-container">
+                                <p class="stat-user stats ">User: <span id="user-name-game"></span></p>
+                            </div>
+
+
                     <div class="stats-container">
                         <p class="stat-hits stats ">Hits: <span id="hit-counter"></span></p>
                     </div>
@@ -329,7 +331,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Stats</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

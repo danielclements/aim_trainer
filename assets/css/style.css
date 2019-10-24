@@ -96,7 +96,13 @@ body {
 }
 
 .user-name {
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
     color: #BABABA;
+    max-width: 100px;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: .25rem;
     
 }
 
@@ -148,6 +154,13 @@ body {
     color: rgb(252, 255, 253);
 }
 
+.stat-user{
+    color: #BABABA;
+    border: solid 2px;
+    border-color: #E00C30;
+    color: #E00C30;
+
+}
 
 
 .stat-missed {
