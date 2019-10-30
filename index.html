@@ -23,7 +23,7 @@
         </div>
     </div>
     <main class="main-container row  container-fluid mb-0 mr-0 ml-0 ">
-        <div class="offset-md-1 col-md-10 offset-lg-0 col-lg-3 p-0 pl-2 pb-5">
+        <div class=" offset-1  col-md-10 offset-lg-0 col-lg-3 p-0 pl-2 pb-5">
             <div class="rules-info rules-info-dark m-0 mr-4 p-3" id="rules-color">
                 <h5 class="rules-header white">About the game: </h5>
                 <p class="about-para white">The aim of the game is simple, progress through the difficulties levels.<br>
@@ -39,7 +39,7 @@
         </div>
 
 
-        <div class="d-md-none d-lg-inline-block offset-md-1 col-md-10 offset-lg-0 col-lg-6 p-0">
+        <div class="d-none  d-lg-inline-block offset-md-1 col-md-10 offset-lg-0 col-lg-6 p-0">
             <div class="game-area p-3" id="target-area">
                 <div class="container-fluid row m-0 p-0">
                     <div class="col-sm-1 spawn-point" id="spawn-point-1"></div>
@@ -212,7 +212,7 @@
         <div class="offset-md-2  offset-lg-0 col-lg-3 col-md-8 p-0 d-flex mb-3 settings">
             <div class="settings container-fluid p-0">
                 <div class="row m-1 ">
-                    <div class="col-sm-9 col-md-4 col-lg-6 settings-containers">
+                    <div class="  offset-md-0 col-5 col-md-4 col-lg-6 settings-containers">
                         <h6 class="header-game-mode white">Game Mode:</h6>
                         <div style="display: flex; justify-content: center;">
                             <div>
@@ -234,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="offset-1 col-sm-5 col-md-5 settings-containers">
+                    <div class="offset-2 offset-md-1 col-5 col-md-4 col-lg-5 settings-containers">
                         <h6 class="header-game-mode white ">Sound:</h6>
                         <div class="d-flex justify-content-center mt-4">
                             <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
@@ -249,7 +249,7 @@
                 <div class="row m-1 pb-3 ">
 
 
-                    <div class="col-sm-5  col-md-6  mt-5  mb-1 settings-containers">
+                    <div class="col-5 offset-md-3  col-md-4 col-lg-6  mt-5  mb-1 settings-containers">
                         <h6 class="header-game-mode white">Targets:</h6>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="alienTargets()" class="btn btn-success mt-3 btn-settings"
@@ -260,7 +260,7 @@
                     </div>
 
 
-                    <div class="col-sm-6  offset-md-1 col-md-5 mb-1 mt-5 settings-containers">
+                    <div class="col-5 offset-2 offset-md-1 col-md-4 col-lg-5 mb-1 mt-5 settings-containers">
                         <h6 class="header-game-mode white">Theme:</h6>
                         <div style="display: flex; justify-content: center;">
                             <button onclick="darkSwitch()" class="btn btn-success mt-3 btn-settings"
@@ -279,15 +279,7 @@
                 </div>
 
                 <div class="row m-1">
-
-                        <div class="col-sm-6 col-md-6 mt-2  settings-containers">
-                                <h6 class="header-game-mode white">Username:</h6>
-                                <div style="display: flex; justify-content: center;">
-                                <input type="text" class="user-name mt-3" id="player-user" value="Player_1"
-                               />
-                                </div>
-                        </div>
-                    <div class="offset-1 col-sm-5 mt-1">
+                    <div class="offset-lg-4 offset-md-2 col-sm-5 mt-1">
                         <div style="display: flex; justify-content: center;">
                             <a href="aim_trainer.html" class="btn btn-primary mt-5 btn-play btn-settings" id="game-start">Play!</a>
 
@@ -298,6 +290,30 @@
 
         </div>
 
+
+        <div class="modal fade" id="userNameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Please Enter A User Name!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                            <input type="text" id="player-name-intro" maxlength="10">
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" id="set-user"  onclick="userNameStorage();" class="btn btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 
@@ -306,5 +322,11 @@
 <script type="text/javascript" src="assets/js/settings.js"></script>
 <script type="text/javascript" src="assets/js/intro.js"></script>
 
-
+ <!-- Bootstrap js -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+ integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
 </html>
