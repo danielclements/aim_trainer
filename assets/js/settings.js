@@ -46,7 +46,6 @@ $(document).ready(function () {
 
 // 
 
-var userIntro = $("#player-user").val();
 
 // Audio
 
@@ -203,10 +202,3 @@ function fruitTargets() {
 
 
 
-$("#game-start").click(function(){
-    userNameStorage();
-});
-
-function userNameStorage(){
-    localStorage.setItem("username", userIntro);
-};

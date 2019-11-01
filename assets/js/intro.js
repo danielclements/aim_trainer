@@ -2,6 +2,12 @@ $(document).ready(function () {
 
     // calls the intro theme on page load 
 
+    userNameModal();
+    $('#userNameModal').modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
     setTimeout(function () {
         introMusic.play();
     }, 1500);
@@ -11,13 +17,14 @@ $(document).ready(function () {
     setInterval(() => {
         targetSpawner();
 
+
     }, 1000);
-
-
 
 
     console.log("ready!");
 });
+
+
 
 
 
@@ -46,4 +53,10 @@ function targetSpawner() {
 function killSwitch() {
     $("#targetIcon").remove();
 
+};
+
+
+function userNameModal() {
+    playerName = $('#player-name-intro').val();
+    localStorage.setItem('playerName', playerName);
 };
