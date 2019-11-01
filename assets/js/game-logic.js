@@ -1,8 +1,10 @@
 $(document).ready(function () {
     gameTheme.play();
-});
 
+    $("replay-btn").click(function(){
+        location.reload(true);});
 
+    });
 // Variables 
 
 var difficulty = difficultySelector();
@@ -127,10 +129,7 @@ function targetSpawner() {
         setTimeout(function () {
             
             endGameModal();
-            $('#summaryModal').modal({
-                backdrop: 'static',
-                keyboard: false
-            });
+            $('#endGameModal').modal('show');
         }, 200);
 
        
@@ -299,7 +298,7 @@ function alienRandomizer() {
 
 
 function endGameModal(){
-    $("#player-name-modal").text(localStorage.getItem("username"));
+    $("#player-name-modal").text(localStorage.getItem("playerName"));
     $("#total-hit-modal").text(hitCounter);
     $("#total-misses-modal").text(failedHitFinal);
     $("#accuracy-modal").text(accuracyCalc());
