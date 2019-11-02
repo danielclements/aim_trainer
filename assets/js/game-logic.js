@@ -1,10 +1,26 @@
 $(document).ready(function () {
-    gameTheme.play();
+    if (localStorage.getItem("difficulty") == "pro") {
+        $('#highScore').html(localStorage.getItem('pro-high-score'));
+        $('#highScoreUser').html(localStorage.getItem('user-pro-high-score'));
 
-    $("replay-btn").click(function(){
-        location.reload(true);});
+    } else if (localStorage.getItem("difficulty") == "beginner")  {
+        $('#highScore').html(localStorage.getItem('easy-high-score'));
+        $('#highScoreUser').html(localStorage.getItem('user-easy-high-score'));
 
-    });
+    } else if (localStorage.getItem("difficulty") == "extreme"){
+        $('#highScore').html(localStorage.getItem('extreme-high-score'));
+        $('#highScoreUser').html(localStorage.getItem('extreme-easy-high-score'));
+    }
+
+    
+    
+    setTimeout(function(){
+        gameTheme.play();
+    },200);
+
+    
+    $("#user-name-game").text(localStorage.getItem("playerName"));
+});
 // Variables 
 
 var difficulty = difficultySelector();
@@ -23,7 +39,7 @@ countDown();
 const targetId = $("#targetIcon");
 const hitDom = $("#hit-counter");
 const missDom = $("#missed-counter");
-const accuracyDom = $("#accuracy-counter")
+const accuracyDom = $("#accuracy-counter");
 const userName = $("#player-user").val();
 
 
@@ -37,11 +53,11 @@ function difficultySelector() {
         difficulty = 700;
     } else if (localStorage.getItem("difficulty") == "beginner") {
         difficulty = 1000;
-    }else if (localStorage.getItem("difficulty") == "extreme"){
+    } else if (localStorage.getItem("difficulty") == "extreme"){
         difficulty = 500;
 
     } else {
-        difficulty = 800
+        difficulty = 700;
     };
 
     return (difficulty);
@@ -126,10 +142,15 @@ function targetSpawner() {
         timerPro.stop();
         failedHit();
         failedHitFinal();
+        highScore();
         setTimeout(function () {
             
             endGameModal();
-            $('#endGameModal').modal('show');
+            
+            $('#endGameModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
         }, 200);
 
        
@@ -302,4 +323,52 @@ function endGameModal(){
     $("#total-hit-modal").text(hitCounter);
     $("#total-misses-modal").text(failedHitFinal);
     $("#accuracy-modal").text(accuracyCalc());
+};
+
+
+
+// High score 
+
+function highScore(){
+    
+
+    if (localStorage.getItem("difficulty") == "pro") {
+        
+        var currentHighScore = localStorage.getItem("pro-high-score")
+        var currentUserName = localStorage.getItem("playerName");
+        
+
+        if (hitCounter > currentHighScore){
+            localStorage.setItem('pro-high-score', hitCounter);
+            localStorage.setItem('user-pro-high-score',currentUserName);
+            $('#highScore').html(hitCounter);
+            $('#highScoreUser').html(currentUserName);
+
+        }
+
+    } else if (localStorage.getItem("difficulty") == "beginner") {
+        var currentHighScore = localStorage.getItem("easy-high-score");
+        var currentUserName = localStorage.getItem("playerName");
+        
+        if (hitCounter > currentHighScore){
+            localStorage.setItem('easy-high-score', hitCounter);
+            localStorage.setItem('user-easy-high-score',currentUserName);
+            $('#highScore').html(hitCounter);
+            $('#highScoreUser').html(currentUserName);
+
+        }
+       
+    } else if (localStorage.getItem("difficulty") == "extreme"){
+        
+        var currentHighScore = localStorage.getItem("extreme-high-score");
+        var currentUserName = localStorage.getItem("playerName");
+        
+        if (hitCounter > currentHighScore){
+            localStorage.setItem('extreme-high-score', hitCounter);
+            localStorage.setItem('user-extreme-high-score',currentUserName);
+            $('#highScore').html(hitCounter);
+            $('#highScoreUser').html(currentUserName);
+        }
+
+    }
 };
