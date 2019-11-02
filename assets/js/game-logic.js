@@ -286,7 +286,7 @@ function fruitRandomizer() {
         var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-bitBanana.png">';
         return (target);
     } else if (numberGen == 2) {
-        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-BitCherry.png">';
+        var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-bitCherry.png">';
         return (target);
     } else {
         var target = '<img onclick= "targetSpawner(); hitCounter++ ;successfulHit();failedHit(); accuracyDomPusher(); " src="assets/images/targets/8-bitWatermelon.png">';
