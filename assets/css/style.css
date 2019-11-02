@@ -95,47 +95,27 @@ body {
     vertical-align: center;
 }
 
-.user-name {
-    font-family: 'Share Tech Mono', monospace;
-    text-align: center;
-    color: #BABABA;
-    max-width: 100px;
-    background-color: transparent;
-    text-decoration: none;
-    border-radius: .25rem;
-    
-}
-
-.user-name:focus {
-    border: solid 2px #25E9E1;
-    outline: none;
-    color: #25E9E1;
-}
-
-.user-name-light {
-    background-color: #6c757d;
-    border-color: #5e5d5d;
-    color: rgb(236, 235, 233);
-    -webkit-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
-    -moz-box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
-    box-shadow: 0px 3px 17px 3px rgba(182, 182, 182, 0.06);
-}
-
-
-.user-name-light:focus{
-    border: solid 2px rgb(141, 228, 225);
-    outline: none;
-    color: rgb(141, 228, 225);
-}
-
-
-
 .stat-accuracy {
     color: #BABABA;
     border: solid 2px;
     border-color: #a67beb;
     color: #a67beb;
+}
 
+
+.stat-accuracy-light {
+    color: rgb(252, 255, 253);
+    border: solid 2px;
+    border-color: #432574;
+    background-color: #7425f1;
+}
+
+
+.stat-accuracy-light:hover {
+    color: rgb(252, 255, 253);
+    border: solid 2px;
+    border-color: #432574;
+    background-color: #432574;
 }
 
 
@@ -155,12 +135,29 @@ body {
 }
 
 .stat-user{
-    color: #BABABA;
     border: solid 2px;
     border-color: #E00C30;
     color: #E00C30;
 
 }
+
+.stat-user-light{
+    color: rgb(252, 255, 253);
+    border: solid 2px;
+    border-color: rgb(146, 15, 37);
+    background-color: rgb(223, 41, 71);
+
+}
+
+.stat-user-light:hover{
+    color: rgb(252, 255, 253);
+    border: solid 2px;
+    border-color: rgb(161, 17, 41);
+    background-color: rgb(161, 17, 41);
+
+}
+
+
 
 
 .stat-missed {

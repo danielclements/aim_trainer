@@ -94,6 +94,9 @@ function lightSwitch() {
     $(".stat-missed").addClass("btn-danger").removeClass("stat-missed").addClass("stat-missed-light");
     $(".high-score").addClass("high-score-light");
     $("#stats-header").removeClass("white");
+    $(".stat-user").removeClass("stat-user").addClass("stat-user-light");
+    $(".stat-accuracy").removeClass("stat-accuracy").addClass("stat-accuracy-light");
+
 };
 
 
@@ -115,6 +118,8 @@ function darkSwitch() {
     $(".stat-missed-light").removeClass("btn-danger").addClass("stat-missed").removeClass("stat-missed-light");
     $(".high-score-light").removeClass("high-score-light");
     $("#stats-header").addClass("white");
+    $(".stat-user-light").addClass("stat-user").removeClass("stat-user-light");
+    $(".stat-accuracy-light").addClass("stat-accuracy").removeClass("stat-accuracy-light");
 };
 
 
@@ -202,3 +207,7 @@ function fruitTargets() {
 
 
 
+function replayBtn(){
+
+    
+}
