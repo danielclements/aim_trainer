@@ -27,7 +27,7 @@ body {
     position: relative;
     padding: 0;
     background-color: #313131;
-    margin-right: 10px;
+    
 
 }
 
@@ -327,7 +327,13 @@ body {
 }
 
 
+@media (min-width: 1024px){
 
+
+.game-area {
+   margin-right:10px;
+    }
+}
 
 
 /* Scalling for laptops  */
@@ -376,7 +382,7 @@ body {
         and (max-width: 1024px) {
   
     .btn-settings{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .settings{
@@ -393,9 +399,33 @@ body {
   }
 
 
-  @media  screen and (max-width: 768x) {
-    
-    .spawn-point{
-        height: 5px;
+  
+
+/* iphone se media query */
+
+  @media (device-height : 568px) 
+   and (device-width : 320px) 
+   and (-webkit-min-device-pixel-ratio: 2){
+
+    .btn-settings{
+        font-size: 9px;
     }
-  };
+
+    .spawn-point{
+        height: 41px;
+    }
+
+
+.game-area {
+   margin-bottom: 60px;
+    
+
+}
+}
+
+@media (max-width:388px){
+    .btn-settings{
+        font-size: 10px;
+    }
+}
+
