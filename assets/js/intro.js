@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    if(localStorage.getItem("difficulty") == undefined){
+        localStorage.setItem("difficulty","pro")
+    };
+
+    if (localStorage.getItem("theme") == undefined){
+        localStorage.setItem("theme", "dark")
+    };
+
+    if (localStorage.getItem("target") == undefined){
+        localStorage.setItem('target', "alien")
+    };
+
+    if (localStorage.getItem("audio") == undefined){
+        localStorage.setItem("audio", "on")
+    };
+    
     // calls the intro theme on page load 
 
     userNameModal();
