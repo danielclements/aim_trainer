@@ -15,10 +15,12 @@ $(document).ready(function () {
     if (localStorage.getItem("audio") == undefined){
         localStorage.setItem("audio", "on")
     };
+
+    $("#player-name-intro").val(localStorage.getItem("playerName"))
     
     // calls the intro theme on page load 
 
-    userNameModal();
+    
     $('#userNameModal').modal({
         backdrop: 'static',
         keyboard: false
