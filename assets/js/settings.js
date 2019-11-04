@@ -54,16 +54,9 @@ var introMusic = new Audio();
 introMusic.src = "assets/audio/273539__tristan-lohengrin__8bit-introduction.wav";
 introMusic.volume = 0.09;
 
-var gunSound = new Audio();
-gunSound.src = "assets/audio/404795__owlstorm__retro-video-game-sfx-laser-2.wav";
-
 var hitSound = new Audio();
 hitSound.src = "assets/audio/431329__someguy22__8-bit-powerup.wav";
 hitSound.volume = 0.09;
-
-var menuSound = new Audio();
-menuSound.src = "assets/audio/350863__cabled-mess__blip-c-03.wav";
-
 
 var gameTheme = new Audio();
 gameTheme.src = "assets/audio/Mecha Collection.mp3";
