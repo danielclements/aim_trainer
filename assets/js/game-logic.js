@@ -10,8 +10,12 @@ $(document).ready(function () {
     } else if (localStorage.getItem("difficulty") == "extreme"){
         $('#highScore').html(localStorage.getItem('extreme-high-score'));
         $('#highScoreUser').html(localStorage.getItem('extreme-easy-high-score'));
-    }
+    };
 
+
+    if(localStorage.getItem("playerName") == ""){
+        localStorage.setItem("playerName","Player");
+    };
     
     
     setTimeout(function(){
@@ -50,11 +54,11 @@ const userName = $("#player-user").val();
 
 function difficultySelector() {
     if (localStorage.getItem("difficulty") == "pro") {
-        difficulty = 700;
+        difficulty = 750;
     } else if (localStorage.getItem("difficulty") == "beginner") {
         difficulty = 1000;
     } else if (localStorage.getItem("difficulty") == "extreme"){
-        difficulty = 500;
+        difficulty = 600;
 
     } else {
         difficulty = 700;
@@ -322,7 +326,7 @@ function endGameModal(){
     $("#player-name-modal").text(localStorage.getItem("playerName"));
     $("#total-hit-modal").text(hitCounter);
     $("#total-misses-modal").text(failedHitFinal);
-    $("#accuracy-modal").text(accuracyCalc());
+    $("#accuracy-modal").text(accuracyCalc() + "%");
 };
 
 
