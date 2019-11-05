@@ -106,8 +106,11 @@ I found the issue to be with the way I had set up the if statement that would st
 ![User Name Test](readme/test.png)
 
 
+- Testing all the settings buttons was done by pressing the setting I wanted to change, Firstly you would see a visual change when pressing the theme. The main issue I encountered when I created the settings buttons was trying to keep changes persistent between pages. This is why I implemented local storage in this project. On page load it checks to see what local storage items have been defined and the runs the function depending on the result. If the theme is set to light mode, The function lightSwitch is run. It does the same thing for each setting that can be defined.
+
 - For overall testing I got a few of my close friends who also play fps games and asked them to play this game every day for 10/20 mins before they started playing any other games.
 Most of my friends noticed a difference after playing Aim_trainer, they said it helped them aim better in-game!
+
 
 
 ## Bugs
