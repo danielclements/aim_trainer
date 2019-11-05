@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+//The if statment below updates the highscore stat on the left with what ever difficulty
+//has been selected.
+
     if (localStorage.getItem("difficulty") == "pro") {
         $('#highScore').html(localStorage.getItem('pro-high-score'));
         $('#highScoreUser').html(localStorage.getItem('user-pro-high-score'));
@@ -12,7 +16,8 @@ $(document).ready(function () {
         $('#highScoreUser').html(localStorage.getItem('extreme-easy-high-score'));
     };
 
-
+// checks to see if the usre defined a user name, if no name was defined then player name is 
+// set to player.
     if(localStorage.getItem("playerName") == ""){
         localStorage.setItem("playerName","Player");
     };
@@ -22,6 +27,7 @@ $(document).ready(function () {
         gameTheme.play();
     },200);
 
+// updates the stats area user name box with current username saved in local storage.   
     
     $("#user-name-game").text(localStorage.getItem("playerName"));
 });
@@ -126,16 +132,6 @@ function targetSpawner() {
         $(spawner()).append(`<div class="target"    id="targetIcon">${targetSelector()}</div>`);
         spawnCount++;
         accuracyDomPusher();
-
-    // } else if (spawnCount = 30) {
-    //     killSwitch();
-    //     timerPro.stop();
-    //     timerPro.start();
-    //     // changed the onlick on target to stop spawning further tagets on click 
-    //     $(spawner()).append(`<div class="target" onclick= "hitCounter++ ;successfulHit(); killSwitch(); failedHit();"   id="targetIcon"></div>`);
-    //     spawnCount++;
-    //     failedHitDomPusher();
-    //     accuracyCalc();
 
 
         // after 30 targets spawn the killswtich is toggled to remove any targets left on screen,
@@ -321,6 +317,7 @@ function alienRandomizer() {
 };
 
 
+//End game modal that updates with end of game stats
 
 function endGameModal(){
     $("#player-name-modal").text(localStorage.getItem("playerName"));
@@ -332,6 +329,12 @@ function endGameModal(){
 
 
 // High score 
+
+// This function uses the same the local storage variable for difficulty,
+// The if stamtent is checking the difficulty setting then with in these if statments we have further
+// if statments that compare the current score to the local storage item of high score
+// if current score > local storage high score then the game will update the score and user name as a
+// Local storage item
 
 function highScore(){
     

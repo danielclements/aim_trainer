@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    //checks if any of the local storage items for settings have been set , if they are undefined it will
+    //set the defaults.
+
     if(localStorage.getItem("difficulty") == undefined){
         localStorage.setItem("difficulty","pro")
     };

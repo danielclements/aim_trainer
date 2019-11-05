@@ -197,10 +197,3 @@ function fruitTargets() {
     $("#fruitToggle").addClass("btn-success").removeClass("btn-secondary");
     $("#alienToggle").addClass("btn-secondary").removeClass("btn-success");
 };
-
-
-
-function replayBtn(){
-
-    
-}
