@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron|Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron%7cPress+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -35,9 +35,9 @@
             <div class="p-3  d-flex justify-content-center">
 
                 <div class="test">
-                        <div class="stats-container">
-                                <p class="stat-user stats ">User: <span id="user-name-game"></span></p>
-                            </div>
+                    <div class="stats-container">
+                        <p class="stat-user stats ">User: <span id="user-name-game"></span></p>
+                    </div>
 
 
                     <div class="stats-container">
@@ -313,54 +313,46 @@
 
         </div>
 
+    </div>
 
-        <footer>
-            <div class="footer-container container-fluid">
+    <!-- end of game modal -->
 
+    <div class="modal fade" id="endGameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Stats</h5>
+                </div>
+                <div class="modal-body">
 
-            </div>
+                    <p>Player:<span id="player-name-modal"></span></p>
+                    <p>Total Hits: <span id="total-hit-modal"></span></p>
+                    <p>Total Misses:<span id="total-misses-modal"></span></p>
+                    <p>Accuracy:<span id="accuracy-modal"></span></p>
 
-        </footer>
+                </div>
+                <div class="modal-footer">
 
-
-
-        <!-- end of game modal -->
-
-        <div class="modal fade" id="endGameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Stats</h5>
-                    </div>
-                    <div class="modal-body">
-
-                        <p>Player:<span id="player-name-modal"></span></p>
-                        <p>Total Hits: <span id="total-hit-modal"></span></p>
-                        <p>Total Misses:<span id="total-misses-modal"></span></p>
-                        <p>Accuracy:<span id="accuracy-modal"></span></p>
-
-                    </div>
-                    <div class="modal-footer">
-
-                        <button id="replay-btn" type="button" class="btn btn-primary" onClick="document.location.reload(true)">Replay!</button>
-                    </div>
+                    <button id="replay-btn" type="button" class="btn btn-primary"
+                        onClick="document.location.reload(true)">Replay!</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/settings.js"></script>
-        <script type="text/javascript" src="assets/js/game-logic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/game-logic.js"></script>
 
 
-        <!-- Bootstrap js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    <!-- Bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 

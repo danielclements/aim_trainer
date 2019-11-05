@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron|Press+Start+2P|Share+Tech+Mono&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Orbitron%7cPress+Start+2P%7cShare+Tech+Mono&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Aim_Trainer</title>
@@ -237,9 +237,9 @@
                     <div class="offset-2 offset-md-1 col-5 col-md-4 col-xl-5 settings-containers">
                         <h6 class="header-game-mode white ">Sound:</h6>
                         <div class="d-flex justify-content-center mt-4">
-                            <button onclick="audioOn()" class="btn btn-success mt-3 btn-settings"
+                            <button onclick="audioOn()" class="btn btn-secondary mt-3 btn-settings"
                                 id="audioOn">On</button>
-                            <button onclick="audioOff()" class="btn btn-secondary mt-3 ml-2 btn-settings"
+                            <button onclick="audioOff()" class="btn btn-danger mt-3 ml-2 btn-settings"
                                 id="audioOff">off</button>
                         </div>
                     </div>
@@ -281,7 +281,8 @@
                 <div class="row m-1">
                     <div class="offset-xl-4 offset-md-2 col-sm-5 mt-1">
                         <div style="display: flex; justify-content: center;">
-                            <a href="aim_trainer.html#target-area" class="btn btn-primary mt-5 btn-play btn-settings" id="game-start">Play!</a>
+                            <a href="aim_trainer.html#target-area" class="btn btn-primary mt-5 btn-play btn-settings"
+                                id="game-start">Play!</a>
 
                         </div>
                     </div>
@@ -300,12 +301,13 @@
                     </div>
                     <div class="modal-body">
 
-                            <input type="text" id="player-name-intro" style="border: 1px black solid" maxlength="10">
+                        <input type="text" id="player-name-intro" style="border: 1px black solid" maxlength="10">
 
                     </div>
                     <div class="modal-footer">
 
-                        <button type="button" id="set-user" data-dismiss="modal" aria-label="Done"  onclick="userNameModal();" class="btn btn-primary">Done</button>
+                        <button type="button" id="set-user" data-dismiss="modal" aria-label="Done"
+                            onclick="userNameModal();" class="btn btn-primary">Done</button>
                     </div>
                 </div>
             </div>
@@ -313,17 +315,20 @@
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/intro.js"></script>
 
+    <!-- Bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/settings.js"></script>
-<script type="text/javascript" src="assets/js/intro.js"></script>
 
- <!-- Bootstrap js -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
+
+
+
 </html>
