@@ -16,7 +16,7 @@ $(document).ready(function () {
     };
 
     if (localStorage.getItem("audio") == undefined){
-        localStorage.setItem("audio", "on")
+        localStorage.setItem("audio", "off")
     };
 
     $("#player-name-intro").val(localStorage.getItem("playerName"))

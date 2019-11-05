@@ -17,9 +17,9 @@ $(document).ready(function () {
     if (localStorage.getItem("audio") == "off") {
 
         audioOff();
-    } else if (localStorage.getItem("audio") == "On") {
+    } else if (localStorage.getItem("audio") == "off") {
 
-        audioOn();
+        audioOff();
 
     };
 
