@@ -1,9 +1,9 @@
 # Aim_Trainer
 
-Aim_Trainer is my second milestone project as part of The Code Institute curriculum, This project idea came to me whilst playing csgo and realizing i needed to get better at aiming, so i thought to my self "What could be better than making my own aim training game!".
+Aim_Trainer is my second milestone project as part of The Code Institute curriculum. This project idea came to me whilst playing csgo and realizing I needed to get better at aiming, so i thought to myself "What could be better than making my own aim training game?!".
 
-Click the targets that appear on screen , make sure your fast they wont wait around for ever !
-The game will not only improve your reacion time but will help improve hand to eye coordination.
+Click the targets that appear on screen, make sure you're fast, they won't wait around forever !
+The game will not only improve your reaction time but will help improve hand to eye coordination.
 
 ## Link to game   
 
@@ -16,25 +16,26 @@ I tried to keep the UX for this project as simple as possible whilst still maint
 
  - [Index]
 
-    - The game starts by asking for a "User Name", once a user name is imputed the rest of the page is revealed. On the left we have a basic how to            play section, that details how to progress through the games difficulty settings and how to actually improve your aim and reaction time.
+    - The game starts by asking for a "User Name", once a user name is imputed the rest of the page is revealed. On the left we have a basic how-to-play section, that details how to progress through the games difficulty settings and how to actually improve your aim and reaction time.
 
-    - In the middle it shows a basic copy of the game so the user knows what to look out for when the actual game starts , this is removed on the mobile      view as it messed up the flow of the page.
+    - In the middle it shows a basic copy of the game so the user knows what to look out for when the actual game starts, this is removed on the mobile view as it messed up the flow of the page.
 
-    - On the right you can see the settings area, all settings are saved in a local storage item, the first time index is loaded it will set the default      settings as a local storage item, if cache is cleared at any point it will be reset on next page load.
+    - On the right you can see the settings area, all settings are saved in a local storage item, the first time index is loaded it will set the default settings as a local storage item, if the cache is cleared at any point it will be reset on next page load.
+
    
 - [Aim_trainer]
 
-    - On the left of the aim_trainer page it displays the stats for the user, the stats update on every click/missed target. The stats do change design       depedning on the theme selected. 
+    - On the left of the aim_trainer page it displays the stats for the user, the stats update on every click/missed target. The stats do change design  depending on the theme selected. 
     
-    - In the middle of this page we have the game area, this is where all targets will spawn, once a target is succesfully clicked it will dissapear and spawn a new target , a max of 30 targets will spawn per game, after the final target dissapears a modal will load.
+    - In the middle of this page we have the game area, this is where all targets will spawn, once a target is successfully clicked it will disappear and spawn a new target, a max of 30 targets will spawn per game, after the final target disappears a modal will load.
 
-    - On the right you can see the same settings as the index page.
+    - On the right, you can see the same settings as the index page.
 
     - End Of Game Modal: Will display Player Name, Total Hits, Total Misses, Accuracy %.
       
 
 
-the whole project was designed off a single wireframe i made using sketch, a lot of the time i was design/ building the project at the same time.
+the whole project was designed off a single wireframe I made using sketch, a lot of the time I designed/ built the project at the same time.
 
 [Wireframes / Mockups!](https://github.com/danielclements/TJ-Dean-Portfolio/tree/master/Wireframes)
 
@@ -46,16 +47,16 @@ the whole project was designed off a single wireframe i made using sketch, a lot
  
 ### Existing Features
 
-- Difficulty selector : The user can select what difficulty they would like to play on depending on how good they think they are.
+- Difficulty selector: The user can select what difficulty they would like to play on depending on how good they think they are.
 
-- Theme / Target selector: The user can chose between the default light theme or they can apply a light theme. Along with the theme the user can chose between fruit targets and alien targets.
+- Theme / Target selector: The user can choose between the default light theme or they can apply a light theme. Along with the theme the user can chose between fruit targets and alien targets.
 
-- High Score: Each difficulty has its own built in high score local storage item, the high score stat will change / update depending on difficulty selected.
+- High Score: Each difficulty has its own built-in high score local storage item, the high score stat will change/update depending on difficulty selected.
 
 - Local Storage: This project uses local storage to save your existing settings, high scores and username.
 
 ### Features Left to Implement
-- In the future I plan to add a alternate game mode that will focus on hitting as many tagets in a row as          possible. The aim of this mode will be to get the highest hit count possible , as soon as one target is missed   the game mode will end.
+- In the future I plan to add an alternate game mode that will focus on hitting as many targets in a row as          possible. The aim of this mode will be to get the highest hit count possible, as soon as one target is missed   the game mode will end.
 
 - I plan to add a global leader board that will persist user scores to promote competition amongst users.          MongoDB is a scalable, JavaScript friendly database which can be integrated into the current application. 
 
@@ -87,15 +88,33 @@ the whole project was designed off a single wireframe i made using sketch, a lot
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+- First thing I began to test and arguably the most important thing was making sure the game was counting each successful hit. To test this part of the game I set the interval timer to 50 secs.
+And made sure to hit every target. After hitting all 30 targets it was showing 30 hits.
+After doing this a few times it was clear the game was successfully counting each hit.
 
+- The second thing that was important was to test the failed hit function. At the beginning of my testing, I found that when a game was completed and you added the number of hits and number of misses together they were adding up to 31.
+
+I found the issue to be with the way I had set up the if statement that would stop spawning after 30, after correcting the if statement it now adds to 30 every time.
+
+
+- The Third function I wanted to check was the accuracy counter, I played the game multiple times and would screenshot my end results. I would then looked back at all the data and did the calculation for each game played to make sure the accuracy counter was correct for each game.
+
+- Testing the high score was easy as this was using local storage items. First thing I did was set a high score of 1 for each difficulty setting, then playing the game and getting 2 on every mode as 2 >1 the game was successfully updating the high score and overwriting the associated local storage item.
+
+- Testing for the user name modal was done by setting a user name then checking the cache to see if it had updated with the new user name. 
+
+![User Name Test](readme/test.png)
+
+
+- For overall testing I got a few of my close friends who also play fps games and asked them to play this game every day for 10/20 mins before they started playing any other games.
+Most of my friends noticed a difference after playing Aim_trainer, they said it helped them aim better in-game!
 
 
 ## Bugs
 
 - Intro music on index page and battle music on aim_trainer dont always play when the page is loaded.
 
-
+- successful hit sound still plays on iphone even if audio is set to off.
 ## Deployment
 
 This site is hosted on github pages.The page is being hosted directly from the master branch, that way any updates that are committed will be updated straight away.  
@@ -144,7 +163,7 @@ By using the file name `index.html` github pages knows what file to display as t
 
 ### Acknowledgements
 
-- I received inspiration for this project from a old aim map in the popular FPS game Counter Strike, the map I used to train on was called [training_aim_csgo2](https://steamcommunity.com/sharedfiles/filedetails/?id=213240871) and was made by users @_katas and @cardboard on Steam.
+- I received inspiration for this project from an old aim map in the popular FPS game Counter Strike, the map I used to train on was called [training_aim_csgo2](https://steamcommunity.com/sharedfiles/filedetails/?id=213240871) and was made by users @_katas and @cardboard on Steam.
 
 - Code to refresh the page on click was created by [TutorialRepublic](https://www.tutorialrepublic.com/faq/how-to-refresh-a-page-with-jquery.php).
 
